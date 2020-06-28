@@ -116,16 +116,21 @@ Included is an overview of the plant calendar where the user can have an quick o
 
 ## Database desig for e-commerce website
 
-![Database](/doc/staraid_db_webpage.pdf)
+![Database](/doc/staraid_db_webpage.png)
 
 ## Site Map for e-commerce website
 
-![Site Map](/doc/sitemap.startaid.pdf)                
+![Site Map](/doc/sitemap.startaid.png)                
 
 ### Mock-up’s
 
 In the links below you can see the mock-up’s that I drew using the mock-up tool “Pencil”:
+- Desk Top
+
 ![Desk top mock-up](/doc/Start_aid_whireframe_desk.png)
+
+- Mobile
+
 ![Mobile mock-up](/doc/Start_aid_whireframe_mobile.png)
 - 
 **Note that the final design has changed from the original design in the mock-ups. The reason why it has changed. I was trying different layouts while I was experimenting and learning the code and sometimes the new designs looked better than the original ones or was just more responsive. *
