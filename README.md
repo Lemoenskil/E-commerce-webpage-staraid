@@ -59,13 +59,10 @@ I need the following for the website
 The following stakeholders wil interact with the website:
 
 * Customer
-* Customer Service
-* Web Mater
 * Content Manager
 * Accounting
 * Fullfillment specialist
 * Logistics
-* Customer Care
 
 ### User stories
 
@@ -95,22 +92,171 @@ Acceptance criteria:
 * Can update my review
 * Can delete my review
 
+### Change Shopping chart
+
+As a customer I want the ability to review my shopping chart to make changes to it
+
+Acceptance criteria:
+
+* View quantities and item in the chart
+* See a total cost before tax and shipping
+* Remove items
+* Adjust quantities of items
+* Click to navigate to an item detail page
+
+### Check out items
+
+As a Customer I want to check out to get my products ship to me
+
+Acceptance criteria:
+
+* Trigger checkout from any page if there are items in the chart
+* Need to sign in
+* If not registered need to register a profile (to get shipping and payment details)
+* Show total include tax and shipping before finalising
+* Show confrormation messages after finalising.
+* Verify payment vai payment processor
+
+### Register
+
+As a customer i want to my details on the order and on my profile.
+
+Acceptance criteria:
+
+* Trigger register when checking out
+* Give and option to sign in or register
+* Show on the navbar that you are signed in
+* Give option in the navbar to sign out
+
+### View my orders
+
+As a customer I want to review my orders so I can see my order history
+
+Acceptance criteria:
+
+* View a list of open and completed orders
+* See the status of the order
+* Navigate to details of the order
+* Include a tracking nr if the order is shiped but not delivered
+* Contact customer service from the order detail page
+
+### Update Product
+
+As a content manager  I want to updated the products so I can adjust our offering over time
+
+Acceptance criteria:
+
+* Add and remove products
+* Modify product images
+
+###  Order report
+
+As a fullfilment officer I want to prinT a order report  prepare the order confirm the tracking nr back
+
+Acceptance criteria:
+
+* Print a report for all open orders
+* Updating order with the tracking nr from the transporter
+
+### Order Analitcs
+
+As Account I want to see the order analitics and the revenue that I can track it against our goals.
+
+Acceptance criteria:
+
+* View dashboars with total order order and euro count
+* Adjust the range with options today, this month, last 30 days, last 90 days, a year
+* See chart comparing order revenu with total cost per product
+
+### Stock update
+
+As a logistics officer I want to have an overview/update on the stock levels
+
+Acceptance criteria:
+
+* Updated the stock levels of product
+* View a list of backorders 
+* View a dashboard that give the stock level and the replenishment times
+
+### Customer support
+
+As a customer I want to contact the supplier to get information or help
+
+Acceptance criteria:
+
+* Complete a E-mail form
+
+### Writing a review
+
+As a customer I want to write a review or rate my experience with start aid
+
+Acceptance criteria:
+
+* Loging as a customer
+* Give a rating out of 5 (stars)
+* Sudmid the written review
+* Change the review
+* Delete the review
+
+### Blog
+
+As a customer I want to write a blog about astrofotograpy and how staraid has improved my experience
+
+Acceptance criteria:
+
+* Loging as a customer
+* Post the text
+* Add photo's
+* Change blog
+* Delete the blog
+* Geo tag setup
+* And select from a list telescope setup
+
+### Profile
+
+As a customer I want to have insight in to mystarid profile to update and see software updates
+
+Acceptance criteria:
+
+* Update profile, name, surname and email
+* View order history
+* View new sofware updates available
+* View your blog and reviews
+* See foto's placed
+
+### News letter
+
+As a customer or potential customer I want to subscribe to a newsletter
+
+Acceptance criteria:
+
+* Sign up for news letter
+* Stop receiving newsletter
+
 
 ### Project Purpose
 
-I am creating a website aimed towards helping current and prospective gardeners getting an overview of plants (vegetable and fruit) that was planted successfully in my region. 
-The website will use MongoDB database, flask and CSS to give the data through to the frontend.    
-The information that is available for the plant will help you to plant it in the right manner which will include information on soil, pests, position, harvest and feeding.
-When a registered user logon he/she will have the ability to change, add or delete the current records
-A not registered user will be able to browse search and view the data on plants.  
-Included is an overview of the plant calendar where the user can have an quick overview when to plant what.   
-
+I am creating a website aimed towards current and prospective astrofototographers in search of a multifuctional easy to use autoguider for their telescope setup. 
+The website will be for the primary purpose to sell the product and secondary to support and nice to have the blog and extra user information.  
+The website wil be to guide the potential buyer in to buying the the product by giving enough information an the ability for extra equiry.
+As a bussiness owner this website will be use to support current customer and to keep contact with them, the reason to get infromation to inprove the product and user experience.
+For the businnes this website will be of value as it is our cashregister for receiving money, keeping track of stock and issuing invoices
+  
 ### Scope of website
-- A Responsive website that is connected with a unstructured database
-- A page to give an overview to browse, search the plants
-- A form to change and create a plant records
-- A page with a plant calendar table
+- A Responsive website (mobile and desktop)
+- Landing page wiht product introduction and reviews
+- Product view page with detail infromation
+- Product search fuctionality
 - Logon ability for a user
+- Chart functionality
+- Check out functionality which include payment and shipment
+- Review functionality
+- Blog post
+- Customer profile
+- Order overview for Customer service
+- Stock overview for Logistics
+- Customer comunication via email or user account
+
 
 ### Website Structure
 
