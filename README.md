@@ -120,7 +120,7 @@ Included is an overview of the plant calendar where the user can have an quick o
 
 #### Site Map for e-commerce website
 
-![Site Map](/doc/sitemap_startaid.png)                
+![Site Map](/doc/sitemap_staraid.png)                
 
 ### Mock-up’s
 
