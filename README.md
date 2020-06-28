@@ -1,60 +1,100 @@
 # E-commerce-website-Staraid
 
-This web application has been designed and built for the requirements of the "Data Centric Development" project of the Code Institute Full-Stack Software Development course.  It is intended to be a personal planning tool for vegetable and fruit  gardeners in North Brabant, The Netherlands, where I live and have my own vegetable and Fruit garden, and I hope to continue to develop it going forward.
-
-Offering this tool to the local hobby gardeners i hope the get the best input and tips to grow the perfect vegetable.  With the experience and  I hope to get the correct species for plant that if fit for my region and also the best planting methods for a optimum yield.
+This web application has been designed and built for the requirements of the "E-commerce-website" project of the Code Institute Full-Stack Software Development course.  It is intended to be used as a  e_comerce website where you can buy the product,
+and  the process from order to shipment.  Which will include a chart, payment, shipping and invoicing.   There will also be a support which will be for before and after sales.
+Staraid is a autoguider that is used when you are tracking stars for astrofotograpy it is a higly texhnical product and is intended to make life easier for the not that techinical or entered astrofototographer.
+As it is nich market mostly focus on hobbiest the website will need to have a lot of infromation on it.  They will also be searching for review or current users as it is a pricy product it will not be a impulse buy.
+There will also be extra product availbe that the customer can buy that is needed for his setup.  For and add on a blog will be place where the more experience customer can share his photo and give user tips new customer
+in this i tried to buld a the brand name.  The website will also have a facebook link where we will share system updates and happy customer blogs.  The website will also be use for support for current and prospective customer to contact Staraid.
 
 The project can be viewed [](herokuapp.com/)
 
 ## Specification / Design
 
-Setting up  a database of vegetables that can be grown in North Brabant, which can be changed and new contributions can be made for local vegetable gardeners.
+The e commerce websit for staraid will focus on the main product which is the autoguider with a few add ons that you can buy for the telescope setup.   The website main fuction is to have a meduim to place a order and settle the payment.
+A potential shopper can brows the web store to get infromation about the product and and create a shopping chart  (information would be like question and awnser and or the videos and reviews on the web site).
+When the customer has made his disision to buy the products he will need to sign in and create a profile to proceed with the order.  After registering he can proceed to choose the metohod of shipment which will add and extra almount to the totol.
+Then the customer can proceed the to the payment type (which for this website will be a credit card).
+After the payment have been successful the customer will receive and invoice as a mail.
 
-For each vegetable/ Fruit grown, the database will store its common names, crop group (leafy, fruit. root, bulb etc.), information (e.g.  soil, feeding position etc..), notes, and photographs.   Calendar will be available that will show time to sow indoors, time to sow outdoors, and time to harvest.
+The customer can use his profile to review and comment and rate the product.  There will also be a blog available where the customer can share his/her experience tell about his setup and condition and place a photo.
 
-The user can logging to have access to the  all vegetables in the database, with buttons to view, edit or delete them.  Without logging in the user will have the functionality to browse or search in the database.    The calendar will be showed in table format which will make it easier for planning purposes. 
+Prospective customer can contact us via form (I will be looking at a chatbot for the future) but for customer who have order the product need to loging that we have there product availble and can be of better assistance
+as for some instances they will need to add a error log.
 
-Clicking "View" for a vegetable will cause a detailed view to be displayed. with a photograph.   User with accounts  will be able to upload photographs for a new entry, to add to an existing entry or replace an existing image.
+The design of the website can been seen in more detail in the sitemap in mokups, but we will use a mostly white back ground with a bar of purple and blue sumulatin twilight. I will be using a bootstrap standard template.
 
-User will be allowed to register just by logging in with a username.  Registered users will be automatically approved as editors and as such will have full CRUD permissions.   Unregistered users will not be able to update or delete records.
-The vegetables will be stored as documents in a non-relational MongoDB database.   The app will be hosted with Heroku.
+In adding extra value added functionality I will be looking at tool and Api that can give weather pattern to when it will be a clear night for astrofotograpy also maybe adding best spot for astrofototographer.
  
 ## UX
  
-#### Build Data Centric Website for Garden planning
+### Build Data E-commerce-website-Staraid
 
 The E-commerce-website-Staraid has the following requirements
 
-Their primary target audiences are herb, vegetable and fruit gardeners or prospective gardeners
+Their primary target audiences profesional, hobbiest and starting astrofototographers
 The website need to include the following 
-- Database with plants 
-- Ability to add new plant records 
-- The ability to change existing records 
-- The ability to delete records
-- View a single records
-- Search for plant records
-- View the plant calendar
+- Database with product, prices, stock, customer, blog, photo's and review (see detailed database digram)
+- Ability to add new product to your shopping chart
+- The ability to change existing shopping chart
+- The ability to delete shopping chart
+- View products
+- Search for products
+- View infromation ex Q&A, review 
 - Browse the website with out signing in 
-- Only user signed in can update, create and delete records
+- Only user signed in can place order write a review and blog.
+- Register user: ability to change, delete reviews and blogs
+- Fotos and videos as as infromation on the product 
+- Q&A page
 
 I need the following for the website
 - logo/ Name
-- Data Base for the plant records (source of information)
-- Picture for the landing page
+- Data Base for product, prices, stock, review, blogs
+- Picture, videos
+- Bootstrap template
+- Stripe setup
 
-#### User stories
-- As a user, I want to know more about the plants and when to grow them.
-- As a user, I'd like to see clean, well presented website that is easy to navigate
-- As a user, I'd like to see a variety different plants
-- As a user, I’d like for the website to be made so that it will work and adapt to all manner of devices (responsive design) 
-- As a user, I want to read on tips and the best way to grow the plant.
-- As a user, I want add new plants to the database and have the ability to change or delete it when is have new tips.  
-- As a user, I want to have a overview of the plant calendar for the plant in my data base
-- As a user, I'd like to see some text to explain what is can expect on the website (instructions) 
-- As a user, I'd like to see engaging use of colour making the website pleasant to look at and keeping the user interested 
-- As a user, I'd want to navigate easily and always have the ability to return to the home page
-- As a user, I want to login to be able to make changes in the database
-- As a user, I want to browse through the available plant records
+### Stakeholders
+
+The following stakeholders wil interact with the website:
+
+* Customer
+* Customer Service
+* Web Mater
+* Content Manager
+* Accounting
+* Fullfillment specialist
+* Logistics
+* Customer Care
+
+### User stories
+
+#### View products
+
+As a customer I would like to view a list of products so I can select some to purchase
+
+Acceptance criteria:
+
+* Can see an thumbnail image for each product
+* Can click to view the details of the product
+* Can add to cart from details page
+* Can search for a product
+
+
+#### Review a product
+
+As a customer I would like to review a product so that I can share my experience
+
+Acceptance criteria:
+
+* Cannot review a product if not logged in
+* Can click to add a review from the product details page
+* Can select a rating from the review page
+* Can enter a description of my experience
+* Can submit my review
+* Can update my review
+* Can delete my review
+
 
 ### Project Purpose
 
@@ -74,11 +114,19 @@ Included is an overview of the plant calendar where the user can have an quick o
 
 ### Website Structure
 
+## Database desig for e-commerce website
+
+![Database](/doc/staraid_db_webpage.pdf)
+
+## Site Map for e-commerce website
+
+![Site Map](/doc/sitemap.startaid.pdf)                
+
 ### Mock-up’s
 
-In the links below you can see the mock-up’s that I drew using the mock-up tool “Balsamiq”:
-![Desk top mock-up](/static/images/mockup_garden_planner.jpg)
-![Mobile mock-up](/static/images/mockup_garden_planner_mobile.jpg)
+In the links below you can see the mock-up’s that I drew using the mock-up tool “Pencil”:
+![Desk top mock-up](/doc/Start_aid_whireframe_desk.png)
+![Mobile mock-up](/doc/Start_aid_whireframe_mobile.png)
 - 
 **Note that the final design has changed from the original design in the mock-ups. The reason why it has changed. I was trying different layouts while I was experimenting and learning the code and sometimes the new designs looked better than the original ones or was just more responsive. *
  
