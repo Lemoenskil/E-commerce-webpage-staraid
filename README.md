@@ -114,13 +114,13 @@ Included is an overview of the plant calendar where the user can have an quick o
 
 ### Website Structure
 
-## Database desig for e-commerce website
+#### Database desig for e-commerce website
 
 ![Database](/doc/staraid_db_webpage.png)
 
-## Site Map for e-commerce website
+#### Site Map for e-commerce website
 
-![Site Map](/doc/sitemap.startaid.png)                
+![Site Map](/doc/sitemap_startaid.png)                
 
 ### Mock-up’s
 
