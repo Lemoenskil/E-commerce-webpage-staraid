@@ -92,7 +92,7 @@ Acceptance criteria:
 * Can update my review
 * Can delete my review
 
-### Change Shopping chart
+#### Change Shopping chart
 
 As a customer I want the ability to review my shopping chart to make changes to it
 
@@ -104,7 +104,7 @@ Acceptance criteria:
 * Adjust quantities of items
 * Click to navigate to an item detail page
 
-### Check out items
+#### Check out items
 
 As a Customer I want to check out to get my products ship to me
 
@@ -117,7 +117,7 @@ Acceptance criteria:
 * Show confrormation messages after finalising.
 * Verify payment vai payment processor
 
-### Register
+#### Register
 
 As a customer i want to my details on the order and on my profile.
 
@@ -128,7 +128,7 @@ Acceptance criteria:
 * Show on the navbar that you are signed in
 * Give option in the navbar to sign out
 
-### View my orders
+#### View my orders
 
 As a customer I want to review my orders so I can see my order history
 
@@ -140,7 +140,7 @@ Acceptance criteria:
 * Include a tracking nr if the order is shiped but not delivered
 * Contact customer service from the order detail page
 
-### Update Product
+#### Update Product
 
 As a content manager  I want to updated the products so I can adjust our offering over time
 
@@ -149,7 +149,7 @@ Acceptance criteria:
 * Add and remove products
 * Modify product images
 
-###  Order report
+####  Order report
 
 As a fullfilment officer I want to prinT a order report  prepare the order confirm the tracking nr back
 
@@ -158,7 +158,7 @@ Acceptance criteria:
 * Print a report for all open orders
 * Updating order with the tracking nr from the transporter
 
-### Order Analitcs
+#### Order Analitcs
 
 As Account I want to see the order analitics and the revenue that I can track it against our goals.
 
@@ -168,7 +168,7 @@ Acceptance criteria:
 * Adjust the range with options today, this month, last 30 days, last 90 days, a year
 * See chart comparing order revenu with total cost per product
 
-### Stock update
+#### Stock update
 
 As a logistics officer I want to have an overview/update on the stock levels
 
@@ -178,7 +178,7 @@ Acceptance criteria:
 * View a list of backorders 
 * View a dashboard that give the stock level and the replenishment times
 
-### Customer support
+#### Customer support
 
 As a customer I want to contact the supplier to get information or help
 
@@ -186,7 +186,7 @@ Acceptance criteria:
 
 * Complete a E-mail form
 
-### Writing a review
+#### Writing a review
 
 As a customer I want to write a review or rate my experience with start aid
 
@@ -198,7 +198,7 @@ Acceptance criteria:
 * Change the review
 * Delete the review
 
-### Blog
+#### Blog
 
 As a customer I want to write a blog about astrofotograpy and how staraid has improved my experience
 
@@ -212,7 +212,7 @@ Acceptance criteria:
 * Geo tag setup
 * And select from a list telescope setup
 
-### Profile
+#### Profile
 
 As a customer I want to have insight in to mystarid profile to update and see software updates
 
@@ -224,7 +224,7 @@ Acceptance criteria:
 * View your blog and reviews
 * See foto's placed
 
-### News letter
+#### News letter
 
 As a customer or potential customer I want to subscribe to a newsletter
 
@@ -234,7 +234,7 @@ Acceptance criteria:
 * Stop receiving newsletter
 
 
-### Project Purpose
+## Project Purpose
 
 I am creating a website aimed towards current and prospective astrofototographers in search of a multifuctional easy to use autoguider for their telescope setup. 
 The website will be for the primary purpose to sell the product and secondary to support and nice to have the blog and extra user information.  
