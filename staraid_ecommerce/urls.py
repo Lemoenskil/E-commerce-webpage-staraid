@@ -15,7 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from accounts import urls as urls_accounts
+from django.conf.urls import url, include
+
+print(admin.site.urls)
+print(include(urls_accounts))
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include(urls_accounts)),
 ]
+
+#  url(r'^admin/', admin.site.urls),
+#     url(r'^$', all_products, name='index'),
+#     url(r'^accounts/', include(urls_accounts)),
+#     url(r'^products/', include(urls_products)),
+#     url(r'^cart/', include(urls_cart)),
+#     url(r'^checkout/', include(urls_checkout)),
+#     url(r'^search/', include(urls_search)),
+#     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
+# ]
