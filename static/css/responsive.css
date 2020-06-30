@@ -8,9 +8,7 @@
 	============================================================================================ */
 }
 @media (max-width:1300px){
-.logo_h {
-    width: 110px !important;
-}	
+	
 }
 @media (max-width:1199px){
 	/* Main Menu Area css
@@ -80,9 +78,6 @@
 @media (max-width:991px){
 	/* Main Menu Area css
 	============================================================================================ */
-	.logo_h {
-    width: 105px !important;
-	}
     .navbar-toggler {
         border: none;
         border-radius: 0px;
