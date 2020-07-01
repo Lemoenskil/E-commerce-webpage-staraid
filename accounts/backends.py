@@ -44,3 +44,14 @@ class CaseInsensitiveAuth:
             return None
         except User.DoesNotExist:
             return None
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    birthdate = models.DateField(verbose_name="birth date")
+    full_name = models.CharField(verbose_name="full name", max_length=50, blank=False)
+    phone_number = models.CharField(verbose_name="phone number", max_length=20, blank=False)
+    country = models.CharField(verbose_name="country", max_length=40, blank=False)
+    postcode = models.CharField(verbose_name="postcode", max_length=20, blank=True)
+    town_or_city = models.CharField(verbose_name="town or city", max_length=40, blank=False)
+    street_address1 = models.CharField(verbose_name="street address 1", max_length=40, blank=False)
+    street_address2 = models.CharField(verbose_name="street address 2", max_length=40, blank=False)

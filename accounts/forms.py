@@ -1,7 +1,9 @@
-from django import forms
+from django import forms 
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
+from .backends import Profile
+from django.forms import DateInput
 
 
 class UserLoginForm(forms.Form):
@@ -38,3 +40,12 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords do not match")
 
         return password2
+
+class ProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ['birthdate', 'full_name', 'phone_number','country', 'postcode','town_or_city','street_address1','street_address2',]
+        widgets = {
+            'birthdate': DateInput(attrs={'type': 'date'})
+        }
