@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.urls import reverse
-from .forms import UserLoginForm, UserRegistrationForm, ProfileForm
+from .forms import UserLoginForm, UserRegistrationForm, ProfileForm, UserUpdateForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -40,13 +40,6 @@ def login(request):
     args = {'user_form': user_form, 'next': request.GET.get('next', '')}
     return render(request, 'login.html', args)
 
-
-@login_required
-def profile(request):
-    """A view that displays the profile page of a logged in user"""
-    return render(request, 'profile.html')
-
-
 def register(request):
     """A view that manages the registration form"""
     if request.method == 'POST':
@@ -75,4 +68,35 @@ def register(request):
     args = {'user_form': user_form, 'profile_form': profile_form}
     return render(request, 'register.html', args)
     
+@login_required
+def update(request):
+    """
+    Update the profile of the logged in user
+    """ 
+    if request.method == 'POST':
+        user_form = UserRegistrationForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, instance=request.user)
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save(commit=True)
+            profile_form = profile_form.save(commit=True)
+            profile_form.user = user
+            profile_form.save()
+
+            user = auth.authenticate(request.POST.get('email'),
+                                     password=request.POST.get('password1'))
+
+            if user:
+                auth.login(request, user)
+                messages.success(request, "You have successfully registered")
+                return redirect(reverse('index'))
+
+            else:
+                messages.error(request, "unable to log you in at this time!")
+    else:
+        user_form = UserUpdateForm(instance=request.user)
+        user = User.objects.get(username=request.user)
+        profile_form = ProfileForm(instance=user.profile)
+        
+    args = {'user_form': user_form, 'profile_form': profile_form}
+    return render(request, 'update.html', args)
     

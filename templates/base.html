@@ -113,10 +113,13 @@
                   <li class="nav-item dropdown">
                     <a href="#" class="icons nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <i class="ti-user" aria-hidden="true"></i>
+                      {% if user.is_authenticated %}
+                        {{ user.get_username }}
+                      {% endif %}
                     </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item nav-link" href="{% url 'register' %}"><i class="profile fa fa-user-plus"></i></i>Register</a>
-                        <a class="dropdown-item nav-link" href="{% url 'profile' %}"><i class="profile fa fa-user"></i>Profile</a>
+                        <a class="dropdown-item nav-link" href="{% url 'update' %}"><i class="profile fa fa-user"></i>Profile</a>
                         <a class="dropdown-item nav-link" href="{% url 'login' %}"><i class="profile fa fa-sign-in"></i> Log in</a>
                         <a class="dropdown-item nav-link" href="{% url 'logout' %}"><i class="profile fa fa-sign-out"></i> Log out</a>
                       </div>
@@ -136,10 +139,10 @@
     </div>
   </header>
     <!--================Header Menu Area =================-->
-    
-    {% block content %} {% endblock %}
-  
-  
+ 
+    {% block content %}
+    {% endblock %}
+
     <!--================ start footer Area  =================-->
   <footer class="footer-area section_gap">
     <div class="container">

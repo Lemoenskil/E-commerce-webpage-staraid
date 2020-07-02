@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+ <div class="container">
+    <form method="post" action="{% url 'update' %}" class="accountform">
+        <fieldset class="form-group">
+            <legend>Update account</legend>
+            {% csrf_token %}
+            {% crispy user_form %}
+            {% crispy profile_form %}
+            <button type="submit" class="main_btn">Update account</button>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
+
