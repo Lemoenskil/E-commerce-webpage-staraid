@@ -19,6 +19,8 @@ from accounts import urls as urls_accounts
 from django.conf.urls import url, include
 from django.views import static
 from .settings import MEDIA_ROOT
+from home import views
+
 
 print(admin.site.urls)
 print(include(urls_accounts))
@@ -27,6 +29,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(urls_accounts)),
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
+    url('', views.index, name='index'),
 ]
 
 #  url(r'^admin/', admin.site.urls),

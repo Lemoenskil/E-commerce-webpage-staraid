@@ -39,7 +39,7 @@ def login(request):
 
     args = {'user_form': user_form, 'next': request.GET.get('next', '')}
     return render(request, 'login.html', args)
-
+    
 def register(request):
     """A view that manages the registration form"""
     if request.method == 'POST':
