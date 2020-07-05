@@ -46,6 +46,10 @@ class CaseInsensitiveAuth:
             return None
 
 class Profile(models.Model):
+    """
+    Defines the user profile. A user profile captures profile information
+    associated with a user account.
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     birthdate = models.DateField(verbose_name="birth date")
     full_name = models.CharField(verbose_name="full name", max_length=50, blank=False)

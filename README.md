@@ -119,10 +119,11 @@ Acceptance criteria:
 
 #### Register
 
-As a customer i want to my details on the order and on my profile.
+As a customer i want to register in order to blog and order products.
 
 Acceptance criteria:
 
+* Create a profile with full name, email, phone number, physical address and birthdate
 * Trigger register when checking out
 * Give and option to sign in or register
 * Show on the navbar that you are signed in
@@ -218,7 +219,7 @@ As a customer I want to have insight in to mystarid profile to update and see so
 
 Acceptance criteria:
 
-* Update profile, name, surname and email
+* Update full name, email, phone number, physical address and birthdate
 * View order history
 * View new sofware updates available
 * View your blog and reviews
