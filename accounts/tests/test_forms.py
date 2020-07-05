@@ -37,9 +37,47 @@ class TestUserRegistrationForm(TestCase):
     def test_password2_label(self):
         self.assertEqual(self.form.fields["password2"].label, "Password Confirmation")
 
-    # def test_clean_email(self):
-    #     form = UserRegistrationForm({
-    #         "username": "newy",
-    #         "email": "where@ever.com",
-    #     })
-    #     self.assertRaises(forms.ValidationError, form.clean_email)
+    def test_clean_email(self):
+        form = UserRegistrationForm({
+            "username": "new_user",
+            "email": "other@ever.com",
+            "password1": "secret1234",
+            "password2": "secret1234",
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_clean_email_not_unique(self):
+        form = UserRegistrationForm({
+            "username": "new_user",
+            "email": "where@ever.com",
+            "password1": "secret1234",
+            "password2": "secret1234",
+        })
+        self.assertFalse(form.is_valid())
+
+    def test_clean_password2(self):
+        form = UserRegistrationForm({
+            "username": "new_user",
+            "email": "other@ever.com",
+            "password1": "secret1234",
+            "password2": "secret1234",
+        })
+        self.assertTrue(form.is_valid())
+
+    def test_clean_password2_empty(self):
+        form = UserRegistrationForm({
+            "username": "new_user",
+            "email": "where@ever.com",
+            "password1": "",
+            "password2": "",
+        })
+        self.assertFalse(form.is_valid())
+
+    def test_clean_password2_mismatch(self):
+        form = UserRegistrationForm({
+            "username": "new_user",
+            "email": "where@ever.com",
+            "password1": "secret1234",
+            "password2": "secret12345",
+        })
+        self.assertFalse(form.is_valid())

@@ -65,7 +65,7 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['full_name', 'birthdate', 'phone_number','country', 'postcode','town_or_city','street_address1','street_address2',]
+        fields = ['full_name', 'birthdate', 'phone_number','country', 'postcode','town_or_city','street_address1','street_address2']
         widgets = {
             'birthdate': DateInput(attrs={'type': 'date'})
         }
@@ -97,7 +97,9 @@ class ProfileForm(forms.ModelForm):
             ),
         )
 
-class UserUpdateForm(UserChangeForm):
+class UserUpdateForm(forms.ModelForm):
+
+    email = forms.EmailField()
 
     class Meta:
         model = User

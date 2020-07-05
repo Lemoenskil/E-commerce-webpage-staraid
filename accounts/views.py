@@ -74,28 +74,16 @@ def update(request):
     Update the profile of the logged in user
     """ 
     if request.method == 'POST':
-        user_form = UserRegistrationForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user)
+        user_form = UserUpdateForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
         if user_form.is_valid() and profile_form.is_valid():
-            user = user_form.save(commit=True)
-            profile_form = profile_form.save(commit=True)
-            profile_form.user = user
+            user_form.save()
             profile_form.save()
-
-            user = auth.authenticate(request.POST.get('email'),
-                                     password=request.POST.get('password1'))
-
-            if user:
-                auth.login(request, user)
-                messages.success(request, "You have successfully registered")
-                return redirect(reverse('index'))
-
-            else:
-                messages.error(request, "unable to log you in at this time!")
+            messages.success(request, "Your account has been updated!")
+            return redirect(reverse('index'))
     else:
         user_form = UserUpdateForm(instance=request.user)
-        user = User.objects.get(username=request.user)
-        profile_form = ProfileForm(instance=user.profile)
+        profile_form = ProfileForm(instance=request.user.profile)
         
     args = {'user_form': user_form, 'profile_form': profile_form}
     return render(request, 'update.html', args)

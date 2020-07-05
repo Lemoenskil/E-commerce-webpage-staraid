@@ -105,6 +105,7 @@ class TestRegister(TestCase):
         self.assertEqual(response.status_code, 200)
         with self.assertRaises(User.DoesNotExist):
             user = User.objects.get(username="fred")
+
         
 class TestLogout(TestCase):
     @classmethod
@@ -147,3 +148,41 @@ class TestUpdate(TestCase):
         response = self.client.get('/accounts/update/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'update.html')
+        
+    def test_post_update_user(self):
+        self.client.login(username='fred', password='secret')
+        response = self.client.post('/accounts/update/', {
+            "username": "fred",
+            "email": "test@test.com",
+            "full_name": "Fred Scheffer",
+            "birthdate": "2020-07-14",
+            "phone_number": "888 888 8888",
+            "country": "United States",
+            "postcode": "2000",
+            "town_or_city": "New York",
+            "street_address1": "1st 1",
+            "street_address2": "",
+        })
+        self.assertEqual(response.status_code, 302)
+        user = User.objects.get(username="fred")
+        profile = Profile.objects.get(user=user)
+        self.assertEqual(profile.phone_number, "888 888 8888")
+
+    def test_post_update_userform_not_valid(self):
+        self.client.login(username='fred', password='secret')
+        response = self.client.post('/accounts/update/', {
+            "username": "fred",
+            "email": "test@test.com",
+            "full_name": "Fred Scheffer",
+            "birthdate": "2020-07-14",
+            "phone_number": "888 888 8888",
+            "country": "United States",
+            "postcode": "2000",
+            "town_or_city": "",
+            "street_address1": "1st 1",
+            "street_address2": "",
+        })
+        self.assertEqual(response.status_code, 200)
+        user = User.objects.get(username="fred")
+        profile = Profile.objects.get(user=user)
+        self.assertEqual(profile.country, "Netherlands")

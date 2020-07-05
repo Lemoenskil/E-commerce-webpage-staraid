@@ -31,10 +31,6 @@ class TestCaseInsensitiveAuth(TestCase):
         user = self.caseInsensitiveAuth.get_user(user_id=1)
         self.assertIsInstance(user, User)
 
-    def test_get_user(self):
-        user = self.caseInsensitiveAuth.get_user(user_id=1)
-        self.assertIsInstance(user, User)
-
     def test_get_user_fails_for_missing_user(self):
         user = self.caseInsensitiveAuth.get_user(user_id=2)
         self.assertIsNone(user)
