@@ -363,27 +363,55 @@ Green Orange and White Scheme with a purple Jumbotron
 
 ## Testing
 
-The app has been manually tested extensively throughout the development process, and when bugs have been found they where fixed or a workaround was implemented.
+### Account App  the follwing test has been done and have pased
+- Views
+    - Test Login
+        test_view_url_exists_at_desired_location
+        test_view_uses_correct_template
+        test_post_login_user
+        test_post_login_invalid_user
+    -Test Register
+        test_view_url_exists_at_desired_location
+        test_view_uses_correct_template
+        test_post_creates_user
+        test_post_user_form_not_valid
+        test_post_profile_form_not_valid
+    -Test Logout
+        test_logout
+     -Test Update
+        test_view_url_exists_at_desired_location
+        test_not_logged_in_redirects_to_login
+        test_view_uses_correct_template
+        test_post_update_user
+        test_post_update_userform_not_valid
+- Models
+    -Test Profile
+        test all labels model
+- Backends
+    -Test Case Insensitive Auth
+        test_authenticate_username_good_password
+        test_authenticate_email_good_password
+        test_authenticate_fails_bad_password
+        test_authenticate_fails_non_existent_user
+        test_get_user
+        test_get_user_fails_for_missing_user
+- Forms
+    -Test User Login Form
+        test_username_or_email_label
+        test_password_label
+    -Test User Registration Form
+        test_username_label
+        test_email_label
+        test_password1_label
+        test_password2_label
+        test_clean_email
+        test_clean_email_not_unique
+        test_clean_password2
+        test_clean_password2_empty
+        test_clean_password2_mismatch
+    -Test Profile Form
+    -Test User Update Forms
 
-The plant_records page and is tested that they loads the data, the pagination work, and the links are working correctly.
-
-The registration page are tested, for mismatched passwords, duplicate user names, as well as successful registration that is show when the username is on the navbar.
-
-The login page is tested as all scenarios for delete, change and created operations required a logged in user. 
-
-The add_plant page is tested by checking that a plant is entered on submit, the page redirects and the new plant is seen on the plant record page.
-
-The plant_records page search functionality  is tested by searching for plant on the  page, getting its id number and going to that search_results page.  
-
-The update_plant page is tested by going to a logged in users view_plant and then via the floating button edit to update_plant page and changing some data and committing it. This the redirects the user to the plant_records page and check that the information has changed on that plant record. 
-  
-The delete functionality is tested by going via view_plant to delete where you get modal as a warning and deleting it, then checking the redirect has happened and that the plant does not appear on the plant_records page.
-
-The list plant page is teste by going via the navbar to the page and check that the data has loaded.
-
-The logout functionality was tested via the navbar a logged in user can logout I have test that as then the name was not visible and the option to sign in was on the navbar and the footer.
-
-As the site is built with a responsive design it works for mobiles it has been checked  on iPhones 6 to X, Samsung Galaxys, iPads (mini to pro), Google's Pixel 2 and 3.
 
 It has been tested with  Chrome Dev Tools and on my Android phone. 
 
