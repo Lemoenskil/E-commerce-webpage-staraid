@@ -8,8 +8,8 @@ from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit, Row, Column, Field
 
 class UserLoginForm(forms.Form):
-    username_or_email = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    username_or_email = forms.CharField(label="username or email")
+    password = forms.CharField(widget=forms.PasswordInput, label="password")
 
 
 class UserRegistrationForm(UserCreationForm):
