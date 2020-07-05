@@ -26,6 +26,7 @@ class UserRegistrationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
+        self.helper.form_tag = False
         self.helper.layout = Layout(
             Row(
                 Column('username', css_class='form-group col-md-6 mb-0'),
@@ -38,6 +39,8 @@ class UserRegistrationForm(UserCreationForm):
                 css_class='form-row'
             ),
         )
+        self.fields['email'].required = True
+
 
     def clean_email(self):
         email = self.cleaned_data.get('email')
@@ -70,6 +73,7 @@ class ProfileForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
+        self.helper.form_tag = False
         self.helper.layout = Layout(
             Row(
                 Column('full_name', css_class='form-group col-md-6 mb-0'),
