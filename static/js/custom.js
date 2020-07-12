@@ -309,35 +309,36 @@
 	
     $(document).ready(function() {
 
-        
+
         var owl = $('.owl-carousel');
         owl.owlCarousel({
-            items:4,
-            loop:true,
-            margin:10,
-            autoplay:true,
-            autoplayTimeout:2000,
-            autoplayHoverPause:true,
-            itemsDesktop : [1199,3],
-            itemsDesktopSmall : [979,3],
-            autoHeight:true,
-            responsive:{
-            0:{
-                items:1
-            },
-            600:{
-                items:3
-            },
-            992:{
-                items:4
+            items: 3,
+            loop: true,
+            margin: 10,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [979, 3],
+            autoHeight: true,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1140: {
+                    items: 3
+                },
+                1160: {
+                    items: 3
+                }
             }
-            }
-          });
-
         });
-        $('.play').on('click',function(){
-            owl.trigger('play.owl.autoplay',[1000])
+        $('.play').on('click', function() {
+            owl.trigger('play.owl.autoplay', [1000])
         })
-        $('.stop').on('click',function(){
+        $('.stop').on('click', function() {
             owl.trigger('stop.owl.autoplay')
         });
+    });
+

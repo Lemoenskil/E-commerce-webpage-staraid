@@ -57,3 +57,57 @@
     display: none!important;
 }
 
+ /* -================End Home Banner Area ================= */
+ 
+ 
+.fa.fa-thumbs-o-up {
+    font-weight: 400 !important;
+    font-family: fontawesome !important;
+    font-size: 32px !important;
+    color: #ffbf66 !important;
+}
+
+.fa.fa-tachometer {
+    font-weight: 400 !important;
+    font-family: fontawesome !important;
+    font-size: 32px !important;
+    color: #ffbf66 !important;
+}
+
+.fa.fa-leaf{
+    font-weight: 400 !important;
+    font-family: fontawesome !important;
+    font-size: 32px !important;
+    color: #ffbf66 !important;
+}
+
+.fa.fa-check{
+    font-weight: 400 !important;
+    font-family: fontawesome !important;
+    font-size: 32px !important;
+    color: #ffbf66 !important;
+}
+
+
+.feature-area{
+    background-image:url("/media/img/sharper-photos-bg.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0px 25px 0px;
+}
+
+
+
+.single-feature{
+    border: 1px solid #F8F8FF !important;
+    margin-bottom: 20px !important;
+}
+
+.single-feature h3 {
+    font-size: 25px !important;
+    color: #F8F8FF!important ;
+    font-family: "Maven Pro", Sans-serif;
+    font-weight: normal !important;
+    line-height: 40px;
+}

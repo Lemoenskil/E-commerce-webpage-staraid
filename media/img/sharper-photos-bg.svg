@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="1009px" preserveAspectRatio="none" viewBox="0 0 1440 1009" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>16FFEBC2-EDB0-4C4C-B523-9433D5D6AF54</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#020935" offset="0%"></stop>
+            <stop stop-color="#151C5C" offset="34.9367264%"></stop>
+            <stop stop-color="#551A6F" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-2" points="0 0 1440 66 1440 1009 0 936"></polygon>
+    </defs>
+    <g id="Webdesign" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage" transform="translate(0.000000, -6064.000000)">
+            <g id="Take-more-beautiful-pictures" transform="translate(0.000000, 6064.000000)">
+                <g id="sharper-photos-bg">
+                    <g id="Bitmap">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <use id="Mask" fill="url(#linearGradient-1)" fill-rule="nonzero" xlink:href="#path-2"></use>
+                    </g>
+                    <path d="M0,81.5 L1440,52.5" id="Line-5" stroke="#9331A9" opacity="0.60718936" fill-rule="nonzero"></path>
+                    <path d="M0,982.5 L1440,948.5" id="Line-5" stroke="#9331A9" opacity="0.697870164" fill-rule="nonzero"></path>
+                    <path d="M0,6.5 L1440,123.5" id="Line-5" stroke="#9331A9" opacity="0.60718936" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

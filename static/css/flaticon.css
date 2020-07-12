@@ -24,12 +24,12 @@
 	[class*=" flaticon-"]:after {
 	    font-family: Flaticon;
       font-size: 32px;
-      color: #2a2a2a;
+      color: #ffbf66;
 	    font-style: normal;
 	    margin-left: 0px;
 	}
 
-	.flaticon-money:before {
+	.flaticon-ti-thumb-up:before {
 	    content: "\f100";
 	}
 
