@@ -99,7 +99,7 @@ class ProfileForm(forms.ModelForm):
 
 class UserUpdateForm(forms.ModelForm):
 
-    email = forms.EmailField()
+    email = forms.EmailField(widget=forms.EmailInput, label="Email address")
 
     class Meta:
         model = User

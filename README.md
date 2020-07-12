@@ -410,8 +410,17 @@ Green Orange and White Scheme with a purple Jumbotron
         test_clean_password2_empty
         test_clean_password2_mismatch
     -Test Profile Form
+        test_full_name_label
+        test_birthdate_label
+        test_phone_number_label
+        test_country_label
+        test_postcode_label
+        test_town_or_city_label
+        test_street_address1_label
+        test_street_address2_label
     -Test User Update Forms
-
+        test_username_label
+        test_email_label
 
 It has been tested with  Chrome Dev Tools and on my Android phone. 
 

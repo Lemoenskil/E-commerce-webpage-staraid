@@ -7,8 +7,8 @@ class Profile(models.Model):
     associated with a user account.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    birthdate = models.DateField(verbose_name="birth date")
-    full_name = models.CharField(verbose_name="full name", max_length=50, blank=False)
+    birthdate = models.DateField(verbose_name="birthdate")
+    full_name = models.CharField(verbose_name="fullname", max_length=50, blank=False)
     phone_number = models.CharField(verbose_name="phone number", max_length=20, blank=False)
     country = models.CharField(verbose_name="country", max_length=40, blank=False)
     postcode = models.CharField(verbose_name="postcode", max_length=20, blank=False)

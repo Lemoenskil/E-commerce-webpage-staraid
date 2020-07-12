@@ -1,8 +1,7 @@
 from django.test import TestCase
 from django import forms 
 from django.contrib.auth.models import User
-
-from accounts.forms import UserLoginForm, UserRegistrationForm
+from accounts.forms import UserLoginForm, UserRegistrationForm, ProfileForm, UserUpdateForm
 
 class TestUserLoginForm(TestCase):
     
@@ -81,3 +80,45 @@ class TestUserRegistrationForm(TestCase):
             "password2": "secret12345",
         })
         self.assertFalse(form.is_valid())
+
+
+class TestProfileForm(TestCase):
+
+    def setUp(self):
+        self.form = ProfileForm()
+
+    def test_full_name_label(self):
+        self.assertEqual(self.form.fields["full_name"].label, "Fullname")
+
+    def test_birthdate_label(self):
+        self.assertEqual(self.form.fields["birthdate"].label, "Birthdate")
+
+    def test_phone_number_label(self):
+        self.assertEqual(self.form.fields["phone_number"].label, "Phone number")
+
+    def test_country_label(self):
+        self.assertEqual(self.form.fields["country"].label, "Country")
+
+    def test_postcode_label(self):
+        self.assertEqual(self.form.fields["postcode"].label, "Postcode")
+        
+    def test_town_or_city_label(self):
+        self.assertEqual(self.form.fields["town_or_city"].label, "Town or city")
+        
+    def test_street_address1_label(self):
+        self.assertEqual(self.form.fields["street_address1"].label, "Street address 1")
+        
+    def test_street_address2_label(self):
+        self.assertEqual(self.form.fields["street_address2"].label, "Street address 2")
+
+
+class TestUserUpdateForm(TestCase):
+
+    def setUp(self):
+        self.form = UserUpdateForm()
+
+    def test_username_label(self):
+        self.assertEqual(self.form.fields["username"].label, "Username")
+
+    def test_email_label(self):
+        self.assertEqual(self.form.fields["email"].label, "Email address")
