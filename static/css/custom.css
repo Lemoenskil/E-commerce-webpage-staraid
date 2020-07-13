@@ -30,7 +30,7 @@
      flex: 1 1 auto
  }
  
-
+ /* -================Home banner ================= */
  .padding {
      padding: 0.7rem
  }
@@ -57,7 +57,19 @@
     display: none!important;
 }
 
- /* -================End Home Banner Area ================= */
+.embed-responsive{
+    overflow: hidden;
+    padding-top: 16%;
+}
+
+.item{
+    margin-bottom: 50px !important;
+}
+
+.comet{
+    padding-top: 50px
+}
+ /* -================Start feature Area ================= */
  
  
 .fa.fa-thumbs-o-up {
@@ -111,3 +123,4 @@
     font-weight: normal !important;
     line-height: 40px;
 }
+
