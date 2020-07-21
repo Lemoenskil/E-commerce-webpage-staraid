@@ -20,15 +20,17 @@ from django.conf.urls import url, include
 from django.views import static
 from .settings import MEDIA_ROOT
 from home import views
+from products import urls as urls_products
+from products.views import all_products
 
 
-print(admin.site.urls)
+print(include(urls_products))
 print(include(urls_accounts))
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('accounts/', include(urls_accounts)),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'^accounts/', include(urls_accounts)),
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
+    re_path(r'^products/', include(urls_products)),
     url('', views.index, name='index'),
 ]
 
