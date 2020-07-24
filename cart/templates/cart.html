@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+    <!--================Cart Area =================-->
+    <section class="cart_area">
+      <div class="container">
+        <div class="cart_inner">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                {% for item in cart_items %}
+                  <tr>
+                    <td>
+                      <div class="media">
+                        <div class="d-flex">
+                          <img
+                            src="{{ MEDIA_URL }}{{ product.image }}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="media-body">
+                          <p>{{ item.product.name }}</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <h5>€ {{ item.product.price }}</h5>
+                    </td>
+                    <td>
+                      <div class="product_count">
+                        <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
+                          {% csrf_token %}
+                          <input
+                            type="number"
+                            name="quantity"
+                            id="sst"
+                            maxlength="12"
+                            value="{{item.quantity}}"
+                            title="Quantity:"
+                            class="input-text qty"
+                          />
+                          <button
+                            onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++; this.form.submit(); return false;"
+                            class="increase items-count"
+                            type="button"
+                          >
+                            <i class="lnr lnr-chevron-up"></i>
+                          </button>
+                          <button
+                            onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--; this.form.submit(); return false;"
+                            class="reduced items-count"
+                            type="button"
+                          >
+                            <i class="lnr lnr-chevron-down"></i>
+                          </button>
+                        </form>
+                      </div>
+                    </td>
+                    <td>
+                      <h5>€{{ item.total }}</h5>
+                    </td>
+                  </tr>
+                {% endfor %}
+                
+                <tr class="bottom_button">
+                  <td>
+                    <a class="gray_btn" href="#">Update Cart</a>
+                  </td>
+                  <td>
+                    <div class="cupon_text">
+                      <input type="text" placeholder="Coupon Code" />
+                      <a class="main_btn" href="#">Apply</a>
+                    </div>
+                  </td>
+                  <td></td>
+                  <td>
+                    <div class="cupon_text">
+                      <input type="text" placeholder="Coupon Code" />
+                      <a class="gray_btn" href="#">Close Coupon</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <h5>Subtotal</h5>
+                  </td>
+                  <td>
+                    <h5>€ {{ total }}</h5>
+                  </td>
+                </tr>
+                <tr class="shipping_area">
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <h5>Shipping</h5>
+                  </td>
+                  <td>
+                    <div class="shipping_box">
+                      <ul class="list">
+                        <li>
+                          <a href="#">{{shipping_tarif}}</a>
+                        </li>
+                      </ul>
+                      <h6>
+                        Calculate Shipping
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                      </h6>
+                      <select class="shipping_select">
+                        {% for region in regions %}
+                          <option value="1">{{region}}</option>
+                        {% endfor %}
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="out_button_area">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>
+                    <div class="checkout_btn_inner">
+                      <a class="gray_btn" href="#">Continue Shopping</a>
+                      <a class="main_btn" href="#">Proceed to checkout</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================End Cart Area =================-->
+
+{% endblock %}

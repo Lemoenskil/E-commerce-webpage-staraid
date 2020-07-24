@@ -22,6 +22,7 @@ from .settings import MEDIA_ROOT
 from home import views
 from products import urls as urls_products
 from products.views import all_products
+from cart import urls as urls_cart
 
 
 print(include(urls_products))
@@ -31,6 +32,7 @@ urlpatterns = [
     re_path(r'^accounts/', include(urls_accounts)),
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     re_path(r'^products/', include(urls_products)),
+    re_path(r'^cart/', include(urls_cart)),
     url('', views.index, name='index'),
 ]
 
