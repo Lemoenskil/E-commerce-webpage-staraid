@@ -23,5 +23,5 @@ def cart_contents(request):
     
     regions = Shipping.objects.all()
     
-    return {'cart_items': cart_items, 'total': total, 'product_count': product_count, 'regions': regions }
+    return {'cart_items': cart_items, 'total': total, 'product_count': product_count }
 
