@@ -124,9 +124,17 @@
     line-height: 40px;
 }
 
-
+ /* -================Cart ================= */
 .thumbnail{
    width:250px !important;
    height:250px !important;
 }
 
+ /* -================Cart icon ================= */
+.cartcounter{
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+}
