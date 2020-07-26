@@ -11,17 +11,32 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     cart_items = []
-    total = 0
+    sub_total = 0
     product_count = 0
     
     for id, quantity in cart.items():
         product = get_object_or_404(Product, pk=id)
         item_total = quantity * product.price
-        total += item_total
+        sub_total += item_total
         product_count += quantity
         cart_items.append({'id': id, 'quantity': quantity, 'product': product, 'total': item_total})
-    
+
     regions = Shipping.objects.all()
+    selected_region = request.session.get('selected_region', regions[0])
+    region_price = 0
+    for region in regions:
+        if region.name == selected_region:
+            region_price = region.price
     
-    return {'cart_items': cart_items, 'total': total, 'product_count': product_count }
+    total = sub_total + region_price
+    
+    return {
+        'product_count': product_count,
+        'cart_items': cart_items,
+        'sub_total': sub_total,
+        'total': total,
+        'regions': regions,
+        'selected_region': selected_region,
+        'region_price': region_price
+    }
 
