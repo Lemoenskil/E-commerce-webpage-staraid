@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404
 from products.models import Product
 from shipping.models import Shipping
-
+from decimal import Decimal
 
 def cart_contents(request):
     """
@@ -11,7 +11,7 @@ def cart_contents(request):
     cart = request.session.get('cart', {})
 
     cart_items = []
-    sub_total = 0
+    sub_total = Decimal(0)
     product_count = 0
     
     for id, quantity in cart.items():
@@ -23,14 +23,15 @@ def cart_contents(request):
 
     regions = Shipping.objects.all()
     try:
-        default_region = regions[0]
+        default_region = regions[0].name
     except IndexError:
         default_region = ""
     selected_region = request.session.get('selected_region', default_region)
-    region_price = 0
+    region_price = Decimal(0)
     for region in regions:
         if region.name == selected_region:
             region_price = region.price
+            break
     
     total = sub_total + region_price
     
