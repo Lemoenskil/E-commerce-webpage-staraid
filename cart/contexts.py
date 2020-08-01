@@ -22,7 +22,11 @@ def cart_contents(request):
         cart_items.append({'id': id, 'quantity': quantity, 'product': product, 'total': item_total})
 
     regions = Shipping.objects.all()
-    selected_region = request.session.get('selected_region', regions[0])
+    try:
+        default_region = regions[0]
+    except IndexError:
+        default_region = ""
+    selected_region = request.session.get('selected_region', default_region)
     region_price = 0
     for region in regions:
         if region.name == selected_region:
