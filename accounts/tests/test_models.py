@@ -28,10 +28,10 @@ class TestProfile(TestCase):
         self.assertEquals(field_label, label)
 
     def test_birthdate_label(self):
-        self.assertLabelIs("birthdate", "birth date")
+        self.assertLabelIs("birthdate", "birthdate")
 
     def test_full_name_label(self):
-        self.assertLabelIs("full_name", "full name")
+        self.assertLabelIs("full_name", "fullname")
 
     def test_phone_number_label(self):
         self.assertLabelIs("phone_number", "phone number")
