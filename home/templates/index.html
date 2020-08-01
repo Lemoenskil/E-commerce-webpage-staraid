@@ -88,7 +88,11 @@
           <div class="offer_content">
             <h3 class="text-uppercase mb-40">StarAid Revolution</h3>
             <h2 class="text-uppercase">Autoguider, automatic polar alignment and plate solver in one</h2>
-            <a href="" class="main_btn mb-20 mt-5">Discover Now</a>
+            {% for product in products %}
+            {% if product.on_offer %}
+                <a href="{% url 'single_product' product.id %}" class="main_btn mb-20 mt-5">Discover Now</a>
+            {% endif %}
+            {% endfor %}
             <p>Limited Stock</p>
           </div>
         </div>
