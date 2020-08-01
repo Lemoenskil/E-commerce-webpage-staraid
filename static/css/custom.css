@@ -138,3 +138,9 @@
     padding: 0 5px;
     vertical-align: top;
 }
+ /* -================single product ================= */
+ 
+.carousel-thumbnail{ 
+	width: 60px;
+	height: 60px;
+	}
