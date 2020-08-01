@@ -24,10 +24,13 @@
                     <td>
                       <div class="media">
                         <div class="d-flex">
+                          
+                          {% with image=item.product.images.all|first %}
                           <img class="thumbnail img-responsive"
-                            src="{{ MEDIA_URL }}{{ item.product.image }}"
+                            src="{{ MEDIA_URL }}{{ image.name }}"
                             alt=""
                           />
+                          {% endwith %} 
                         </div>
                         <div class="media-body">
                           <p>{{ item.product.name }}</p>
