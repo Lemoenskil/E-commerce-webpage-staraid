@@ -450,7 +450,7 @@ Link to plant pictures are random an my be protected but it was tried to avoided
  
 
 ### Work based on other code
-Code from all the frameworks as Materialize, Bootstrap, Flask Forms  and Stackoverflow  that i have used, And the code from the Task Manager from the code institute                               
+-codepen.io for the search bar                              
 
 ### Acknowledgements
 

@@ -103,17 +103,17 @@
               <div class="col-lg-5 pr-0">
                 <ul class="nav navbar-nav navbar-right right_nav pull-right">
                   <li class="nav-item">
-                    <a href="#" class="icons">
-                      <i class="ti-search" aria-hidden="true"></i>
-                    </a>
+                    <a href="#" onclick="$('#search-overlay').fadeIn();return false;" class="icons"><i id="search-btn" class="ti-search" aria-hidden="true"></i></a>
                   </li>
 
                   <li class="nav-item">
                     <a href="{% url 'view_cart' %}" class="icons">
                       <i class="ti-shopping-cart"></i>
-                      <span class = "cartcounter"  >
-                        {{product_count}}
-                      </span>
+                      {% if product_count > 0 %}
+                        <span class = "cartcounter" >
+                          {{product_count}}
+                        </span>
+                      {% endif %}
                     </a>
                   </li>
 
@@ -142,6 +142,17 @@
             </div>
           </div>
         </nav>
+      </div>
+    </div>
+    <div id="search-overlay" class="block">
+      <div class="centered">
+        <div id='search-box'>
+          <form action="{% url 'search' %}" id='search-form' method="get">
+            <input type="text" name="q" placeholder='Search'>
+            <a href="#" class="icons" onclick="this.parentNode.submit(); return false;"><i class="ti-search search-icons"></i></a>
+            <a href="#" class="icons" onclick="$('#search-overlay').fadeOut();return false;"><i id="search-btn" class="ti-close search-icons" aria-hidden="true"></i></a>
+          </form>
+        </div>
       </div>
     </div>
   </header>

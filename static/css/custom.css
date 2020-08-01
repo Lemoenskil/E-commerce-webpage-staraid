@@ -138,9 +138,59 @@
     padding: 0 5px;
     vertical-align: top;
 }
- /* -================single product ================= */
+
+/* -================single product ================= */
  
 .carousel-thumbnail{ 
 	width: 60px;
 	height: 60px;
-	}
+}
+
+/* -================search bar ================= */
+
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 10px 15px;
+  color: #FFF;
+  border: none;
+  background: transparent;
+}
+
+
+#search-overlay{
+  display:none;
+}
+
+#search-box {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+#search-form {
+  height: 5em;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+#search-text {
+  font-size: 14px;
+  color: #ddd;
+  border-width: 1;
+  background: transparent;
+}
+
+#search-box input[type="text"] {
+  width: 85%;
+  padding: 20px;
+  color: #333;
+  outline: none;
+  font-size: 1.4em;
+}
+
+.search-icons{
+    padding: 4px;
+}
+

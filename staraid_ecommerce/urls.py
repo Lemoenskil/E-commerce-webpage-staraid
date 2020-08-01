@@ -23,6 +23,7 @@ from home import views
 from products import urls as urls_products
 from products.views import all_products
 from cart import urls as urls_cart
+from search import urls as urls_search
 from shipping import urls as urls_shipping
 
 
@@ -34,6 +35,7 @@ urlpatterns = [
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     re_path(r'^products/', include(urls_products)),
     re_path(r'^cart/', include(urls_cart)),
+    re_path(r'^search/', include(urls_search)),
     re_path(r'^shipping/', include(urls_shipping)),
     url('', views.index, name='index'),
 ]
