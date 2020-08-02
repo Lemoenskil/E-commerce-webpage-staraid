@@ -56,6 +56,19 @@ def checkout(request):
             messages.error(request, "We were unable to take a payment with that card!")
     else:
         payment_form = MakePaymentForm()
-        order_form = OrderForm()
+        order_form = OrderForm(initial={
+            'full_name': request.user.profile.full_name,
+            'phone_number': request.user.profile.phone_number,
+            'country': request.user.profile.country,
+            'postcode': request.user.profile.postcode,
+            'town_or_city' : request.user.profile.town_or_city,
+            'street_address1': request.user.profile.street_address1,
+            'street_address2': request.user.profile.street_address2,
+        })
     
-    return render(request, "checkout.html", {"order_form": order_form, "payment_form": payment_form, "publishable": settings.STRIPE_PUBLISHABLE})
+    print(request.user.profile)
+    return render(request, "checkout.html", {
+        "order_form": order_form,
+        "payment_form": payment_form,
+        "publishable": settings.STRIPE_PUBLISHABLE,
+    })

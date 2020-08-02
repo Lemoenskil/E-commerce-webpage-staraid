@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.urls import reverse
 from .forms import UserLoginForm, UserRegistrationForm, ProfileForm, UserUpdateForm
+from .models import Profile
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -75,16 +76,27 @@ def update(request):
     """ 
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        if hasattr(request.user, "profile"):
+            profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        else:
+            profile_form = ProfileForm(request.POST)
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
-            profile_form.save()
+            if not hasattr(request.user, "profile"):
+                profile_form = profile_form.save(commit=False)
+                profile_form.user = request.user
+                profile_form.save()
+            else:
+                profile_form.save()
             messages.success(request, "Your account has been updated!")
             return redirect(reverse('index'))
     else:
         user_form = UserUpdateForm(instance=request.user)
-        profile_form = ProfileForm(instance=request.user.profile)
-        
+        if hasattr(request.user, "profile"):
+            profile_form = ProfileForm(instance=request.user.profile)
+        else:
+            profile_form = ProfileForm()
+
     args = {'user_form': user_form, 'profile_form': profile_form}
     return render(request, 'update.html', args)
     

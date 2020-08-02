@@ -6,7 +6,7 @@ class Profile(models.Model):
     Defines the user profile. A user profile captures profile information
     associated with a user account.
     """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
     birthdate = models.DateField(verbose_name="birthdate")
     full_name = models.CharField(verbose_name="fullname", max_length=50, blank=False)
     phone_number = models.CharField(verbose_name="phone number", max_length=20, blank=False)
