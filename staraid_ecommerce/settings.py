@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'cart',
+    'checkout'
     'shipping',
     'home',
 ]
@@ -147,6 +148,9 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'accounts.backends.CaseInsensitiveAuth'
 ]
+
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
