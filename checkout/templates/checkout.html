@@ -32,6 +32,9 @@
               <h3>Order Details</h3>
               <form role="form" method="post" id="payment-form" action="{% url 'checkout' %}">
                 <div class="col-md-12 form-group p_star">
+                  <div id="credit-card-errors" style="display: none;">
+                    <div class="alert-message block-message error" id="stripe-error-message"></div>
+                  </div>
                     {% crispy order_form %}
                 </div>
                 <div class="col-md-12 form-group p_star">
@@ -89,6 +92,7 @@
                   <div >
                     <input class="main_btn col-md-12" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
                   </div>
+
                 </form>
               </div>
             </div>

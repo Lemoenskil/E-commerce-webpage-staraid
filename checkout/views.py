@@ -52,7 +52,6 @@ def checkout(request):
             else:
                 messages.error(request, "Unable to take payment")
         else:
-            print(payment_form.errors)
             messages.error(request, "We were unable to take a payment with that card!")
     else:
         payment_form = MakePaymentForm()
@@ -66,7 +65,6 @@ def checkout(request):
             'street_address2': request.user.profile.street_address2,
         })
     
-    print(request.user.profile)
     return render(request, "checkout.html", {
         "order_form": order_form,
         "payment_form": payment_form,

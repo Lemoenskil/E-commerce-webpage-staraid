@@ -27,8 +27,7 @@
     <link type="text/x-scss" href="{% static 'scss/style.scss' %}" rel="stylesheet" media="screen">
   {% endcompress %}
   
-  {% block head_js %}
-  {% endblock head_js %}
+
 </head>
 
 <body>
@@ -128,10 +127,13 @@
                       {% endif %}
                     </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item nav-link" href="{% url 'register' %}"><i class="profile fa fa-user-plus"></i></i>Register</a>
-                        <a class="dropdown-item nav-link" href="{% url 'update' %}"><i class="profile fa fa-user"></i>Profile</a>
-                        <a class="dropdown-item nav-link" href="{% url 'login' %}"><i class="profile fa fa-sign-in"></i> Log in</a>
-                        <a class="dropdown-item nav-link" href="{% url 'logout' %}"><i class="profile fa fa-sign-out"></i> Log out</a>
+                        {% if user.is_authenticated %}
+                          <a class="dropdown-item nav-link" href="{% url 'update' %}"><i class="profile fa fa-user"></i>Profile</a>
+                          <a class="dropdown-item nav-link" href="{% url 'logout' %}"><i class="profile fa fa-sign-out"></i> Log out</a>
+                        {% else %}
+                          <a class="dropdown-item nav-link" href="{% url 'login' %}"><i class="profile fa fa-sign-in"></i> Log in</a>
+                          <a class="dropdown-item nav-link" href="{% url 'register' %}"><i class="profile fa fa-user-plus"></i></i>Register</a>
+                        {% endif %}
                       </div>
                   </li>
 
@@ -160,10 +162,21 @@
       </div>
     </div>
   </header>
-    <!--================Header Menu Area =================-->
- 
-    {% block content %}
-    {% endblock %}
+  
+  <!--================Header Menu Area =================-->
+  
+  {% if messages %}
+    <div class="alert alert-success">
+      <div class="messages">
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  
+  {% block content %}
+  {% endblock %}
 
     <!--================ start footer Area  =================-->
   <footer class="footer-area section_gap">
@@ -241,6 +254,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="/static/js/jquery-3.2.1.min.js"></script>
+  {% block head_js %}
+  {% endblock head_js %}
   <script src="/static/js/popper.js"></script>
   <script src="/static/js/bootstrap.min.js"></script>
   <script src="/static/js/stellar.js"></script>

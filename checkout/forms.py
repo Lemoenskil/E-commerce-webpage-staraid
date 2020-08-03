@@ -18,7 +18,7 @@ class MakePaymentForm(forms.Form):
     class Meta:
         model = Order
         fields = (
-            'credit_card_number', 'cvv', 'expiry_month', 'expiry_year')
+            'credit_card_number', 'cvv', 'expiry_month', 'expiry_year', 'stripe_id')
             
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -39,6 +39,10 @@ class MakePaymentForm(forms.Form):
             ),
             Row(
                 Column('expiry_year', css_class='form-group col-md-04 mb-0'),
+                css_class='form-row'
+            ),
+            Row(
+                Column('stripe_id', css_class='form-group col-md-04 mb-0'),
                 css_class='form-row'
             ),
         )
