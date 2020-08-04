@@ -30,6 +30,7 @@ from shipping import urls as urls_shipping
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
+    re_path(r'^$', views.index, name='index'),
     re_path(r'^accounts/', include(urls_accounts)),
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     re_path(r'^products/', include(urls_products)),
@@ -37,7 +38,6 @@ urlpatterns = [
     re_path(r'^search/', include(urls_search)),
     re_path(r'^checkout/', include(urls_checkout)),
     re_path(r'^shipping/', include(urls_shipping)),
-    url('', views.index, name='index'),
 ]
 
 #  url(r'^admin/', admin.site.urls),
