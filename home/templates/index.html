@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block content %}
   <!--================Home Banner Area =================-->
   <section >
@@ -11,12 +13,12 @@
                         <div class="card-body">
                             <h4 class="card-title"></h4>
                             <div id = "home-carousel" class="owl-carousel owl-theme">
-                                <div class="item"> <img src="/media/img/staraid.png" alt="image" /> </div>
-                                <div class="item"> <img src="/media/img/Looking-at-the-App-600x400.jpg" alt="image" /> </div>
-                                <div class="item"> <img src="/media/img/Capturez.PNG" alt="image" /> </div>
-                                <div class="item"> <img class="img-fluid" src="/media/img/StarAid-Polar-alignment-Step4-A.png" alt="image" /> </div>
+                                <div class="item"> <img src="{% static 'img/staraid.png' %}" alt="image" /> </div>
+                                <div class="item"> <img src="{% static 'img/Looking-at-the-App-600x400.jpg' %}" alt="image" /> </div>
+                                <div class="item"> <img src="{% static 'img/Capturez.PNG' %}" alt="image" /> </div>
+                                <div class="item"> <img class="img-fluid" src="{% static 'img/StarAid-Polar-alignment-Step4-A.png' %}" alt="image" /> </div>
                                 <div class="item embed-responsive embed-responsive-21by9"> <iframe class="embed-responsive-item" width="100%" max-height="900px" src="https://www.youtube.com/embed/NPnd8fSdYOM" frameborder="0" ></iframe> </div>
-                                <div class="item comet"> <img src="/media/img/Comet_traking.png" alt="image" /> </div>
+                                <div class="item comet"> <img src="{% static 'img/Comet_traking.png' %}" alt="image" /> </div>
                                 <div class="item embed-responsive embed-responsive-21by9"> <iframe class="embed-responsive-item" width="100%" max-height="900px" src="https://www.youtube.com/embed/q8LVzth3bic" frameborder="0" ></iframe> </div>
                             </div>
                         </div>
@@ -30,7 +32,7 @@
   <!--================End Home Banner Area =================-->
 
   <!-- Start feature Area -->
-  <section class="feature-area section_gap_bottom_custom">
+  <section style="background: url('{% static 'img/sharper-photos-bg.svg' %}'); background-position: center center; background-repeat: no-repeat; background-size: cover; padding: 30px 0px 25px 0px;" class="section_gap_bottom_custom">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
@@ -81,7 +83,7 @@
   <!-- End feature Area -->
   
     <!--================ Offer Area =================-->
-  <section class="offer_area">
+  <section style="background: url('{% static 'img/Staraid_offer.png' %}') no-repeat" class="offer_area">
     <div class="container">
       <div class="row justify-content-center">
         <div class="offset-lg-4 col-lg-6 text-center">
