@@ -2,7 +2,7 @@
 ============================================================================================ */
 
 .offer_area {
-    background: url(/media/img/Staraid_offer.png) no-repeat center;
+    background: url(https://staraid-ecommerce.s3.eu-central-1.amazonaws.com/static/img/Staraid_offer.png) no-repeat center;
     background-size: cover;
     @media (max-width: 991px) {
         background: $offwhite;
