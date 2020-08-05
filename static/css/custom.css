@@ -123,8 +123,10 @@
 
  /* -================Cart ================= */
 .thumbnail{
-   width:250px !important;
-   height:250px !important;
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
  /* -================Cart icon ================= */
@@ -137,10 +139,18 @@
 }
 
 /* -================single product ================= */
+.card-img {
+    min-height: 255px;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: fill !important;
+}
  
-.carousel-thumbnail{ 
+.carousel-thumbnail{
+    display: block;
 	width: 60px;
 	height: 60px;
+	object-fit: cover;
 }
 
 /* -================search bar ================= */
@@ -190,5 +200,4 @@
 .search-icons{
     padding: 4px;
 }
-
 

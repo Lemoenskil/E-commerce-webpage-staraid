@@ -24,21 +24,19 @@
                     <td>
                       <div class="media">
                         <div class="d-flex">
-                          
                           {% with image=item.product.images.all|first %}
-                          <img class="thumbnail img-responsive"
-                            src="{{ MEDIA_URL }}{{ image.name }}"
-                            alt=""
-                          />
+                            <a href="{% url 'single_product' item.id %}">
+                              <img class="thumbnail img-responsive" src="{{ MEDIA_URL }}{{ image.name }}" alt="" />
+                            </a>
                           {% endwith %} 
                         </div>
                         <div class="media-body">
-                          <p>{{ item.product.name }}</p>
+                          <p><a href="{% url 'single_product' item.id %}">{{ item.product.name }}</a></p>
                         </div>
                       </div>
                     </td>
                     <td>
-                      <h5>$ {{ item.product.price }}</h5>
+                      <h5>€ {{ item.product.price }}</h5>
                     </td>
                     <td>
                       <div class="product_count">
@@ -71,7 +69,7 @@
                       </div>
                     </td>
                     <td>
-                      <h5>${{ item.total }}</h5>
+                      <h5>€ {{ item.total }}</h5>
                     </td>
                   </tr>
                 {% endfor %}
@@ -97,7 +95,7 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <h5>$ {{ sub_total }}</h5>
+                    <h5>€ {{ sub_total }}</h5>
                   </td>
                 </tr>
                 <tr class="shipping_area">
@@ -123,7 +121,7 @@
                     <div class="shipping_box">
                       <ul class="list">
                         <li>
-                          $ {{ region_price }}
+                          € {{ region_price }}
                         </li>
                       </ul>
                     </div>
@@ -136,7 +134,7 @@
                   <td></td>
                   <td></td>
                   <td>
-                    <h5>$ {{ total }}</h5>
+                    <h5>€ {{ total }}</h5>
                   </td>
                 </tr>
 
