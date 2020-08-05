@@ -140,7 +140,7 @@
 
 /* -================single product ================= */
 .card-img {
-    min-height: 255px;
+    min-height: 270px;
     width: 100% !important;
     height: 100% !important;
     object-fit: fill !important;
