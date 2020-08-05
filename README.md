@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Lemoenskil/E-commerce-webpage-staraid.svg?branch=master)](https://travis-ci.org/Lemoenskil/E-commerce-webpage-staraid)
+
 # E-commerce-website-Staraid
 
 This web application has been designed and built for the requirements of the "E-commerce-website" project of the Code Institute Full-Stack Software Development course.  It is intended to be used as a  e_comerce website where you can buy the product,
