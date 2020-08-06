@@ -9,7 +9,7 @@
         Stripe.publishableKey = '{{ publishable }}';
     //]]>
 </script>
-<script type="text/javascript" src="/static/js/stripe.js"></script>
+<script type="text/javascript" src="https://staraid-ecommerce.s3.amazonaws.com/static/js/stripe.js"></script>
 {% endblock head_js %}
 
     <!--================Checkout Area =================-->
@@ -65,22 +65,13 @@
                 </ul>
                 <ul class="list list_2">
                   <li>
-                    <a href="#"
-                      >Subtotal
-                      <span>€{{ sub_total }}</span>
-                    </a>
+                    <a href="#">Subtotal <span>€{{ sub_total }}</span></a>
                   </li>
                   <li>
-                    <a href="#"
-                      >Shipping
-                      <span>Flat rate: €{{ region_price }}</span>
-                    </a>
+                    <a href="#">Shipping<span>Flat rate: €{{ region_price }}</span></a>
                   </li>
                   <li>
-                    <a href="#"
-                      >Total
-                      <span>€{{ total }}</span>
-                    </a>
+                    <a href="#">Total<span>€{{ total }}</span></a>
                   </li>
                 </ul>
                 <!--<div class="creat_account">-->
