@@ -211,25 +211,19 @@
         </div>
         <div class="col-lg-4 col-md-6 single-footer-widget">
           <h4>Receive updates about StarAid Revolution</h4>
-          <div class="form-wrap" id="mc_embed_signup">
-            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-              method="get" class="form-inline">
-              <input
-                class="form-control"
-                name="email"
-                maxlength="254"
-                placeholder="Your Email Address"
-                onfocus="this.placeholder = ''"
-                onblur="this.placeholder = 'Your Email Address '"
-                required=""
-                type="email">
-              <button class="click-btn btn btn-default">Subscribe</button>
-              <div style="position: absolute; left: -5000px;">
-                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-              </div>
-              <div class="info"></div>
-            </form>
-          </div>
+          <form action="{% url 'newsletter_subscribe' %}" method="POST" class="form-inline">
+            {% csrf_token %}
+            <input
+              class="form-control"
+              name="email"
+              maxlength="254"
+              placeholder="Your Email Address"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Your Email Address '"
+              required=""
+              type="email">
+            <button class="click-btn btn btn-default" type="submit" formmethod="POST">Subscribe</button>
+          </form>
         </div>
       </div>
       <div class="footer-bottom row align-items-center">
