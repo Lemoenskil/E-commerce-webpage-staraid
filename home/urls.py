@@ -11,5 +11,3 @@ urlpatterns = [
     re_path(r'', index, name="index"),
     
 ]
-
-terms_and_conditions
