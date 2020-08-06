@@ -31,3 +31,9 @@ def privacy(request):
     Sends to privacy for information purposes only.
     """
     return render(request, 'privacy.html')
+    
+def cookies(request):
+    """
+    Sends to privacy for information purposes only.
+    """
+    return render(request, 'cookies.html')
