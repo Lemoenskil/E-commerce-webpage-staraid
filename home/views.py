@@ -17,3 +17,17 @@ def returns_and_warranty(request):
     Sends to a Returns and Warranty page for information purposes only.
     """
     return render(request, 'returns_and_warranty.html')
+
+def terms_and_conditions(request):
+    """
+    Sends to a terms_and_conditions page for information purposes only.
+    """
+    return render(request, 'terms_and_conditions.html')
+    
+    privacy
+    
+def privacy(request):
+    """
+    Sends to privacy for information purposes only.
+    """
+    return render(request, 'privacy.html')
