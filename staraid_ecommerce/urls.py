@@ -26,11 +26,11 @@ from cart import urls as urls_cart
 from checkout import urls as urls_checkout
 from search import urls as urls_search
 from shipping import urls as urls_shipping
-
+from home.urls import urlpatterns as index_pats
 
 urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
-    re_path(r'^$', views.index, name='index'),
+    # re_path(r'^$', views.index, name='index'),
     re_path(r'^accounts/', include(urls_accounts)),
     re_path(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT}),
     re_path(r'^products/', include(urls_products)),
@@ -38,6 +38,7 @@ urlpatterns = [
     re_path(r'^search/', include(urls_search)),
     re_path(r'^checkout/', include(urls_checkout)),
     re_path(r'^shipping/', include(urls_shipping)),
+    re_path(r'',include(index_pats)),
 ]
 
 #  url(r'^admin/', admin.site.urls),
