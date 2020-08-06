@@ -286,11 +286,12 @@ In the links below you can see the mock-up’s that I drew using the mock-up too
  
 ### Design Ideas
 
-- Navbar and Footer
-Standard on all the pages there will be a Navbar and footer.  The Navbar will navigate to Home, add Plant, Plant Calendar and Registered
+- Navbar
+Standard on all the pages there will be a Navbar.  The Navbar will navigate to all sites on the website and  to Home, and have the register functionality
 
 - The landing page 
-Wil have a maximum of 6 cards displayed with a picture and a plant name. A Jumbotron with a search bar will be shown on top 
+Will have a banner with features of the main product on it.   A offer eara wher there will be the oppurtunity to go directly to the staraid main product.
+A featured product area  where some product will be featured.   And the last will be some comment and review preasent on the landing page.
 
 - Single plant view
 Will have a picture, a plant table and the information on the plant.  A floating button will be available when you are loged in to change or delete the record.
@@ -310,8 +311,8 @@ From the Navbar you can navigate here.  A table will be on this page
 - Register page
 Page will have a form and a submit button
 
-- login page
-Form with a warning and a submit button
+- Footer
+Standard on all the pages there will be a footer.
 
 
 ##### Font
@@ -324,19 +325,12 @@ Green Orange and White Scheme with a purple Jumbotron
 
 ### Existing Features
 
-- All pages feature a navigation bar at the top, see useful links, or login / logout. 
-- Upon viewing the page  the navbar will give you the option to login/or out, go to plant calendar, home , register or add plant
-- On the landing page maximum of 6 cards will be displayed if you want to browse you can use the page navigation on the bottom.  You can also click on the card that will take you to the plant overview page.
-- On the top of the landing page below the navbar you will find a jumbotron with a search bar, which will allow you to search on the name, crop group or notes.
-- On the view page there will be a floating button on which you can either delete or edit the records.  When editing it will redirect you to a form, when deleting it will redirect you to a modal
-- From the navigation bar you can be directed to  the add record form
-- Both add record and edit record form have a Table with checkbox to select the plant calendar.
-- The search bar in the Jumbotron will give you the option to search the data base and redirect you to a page with search results
-- In the navbar you are redirected to the register page where you can create a user using a form.
-- The option to login is also on the landing page, which will redirect you to a form to login
-- In the responsive view for mobile with a side nav bar and the basic sizing
-- The creation of an account to edit add and delete records.
-- Option on the login screen to register. 
+The website  html pages extend from the base.html page where the navbar and footer is preasent the content displays on each page by {% block content %} and {% endblock %} tags.:
+
+- Navbar: Every page features the navbar which signals where users can find each page. The navbar hosts the following links: Home, Shop, My Stariad, About, Contact, Search, Cart, Register and Login. The navbar is responsive and the links collapse on smaller screens, and are replaced by a hamburger menu icon.
+
+- Footer: This is a simple section signalling the end of the website on the page. In this section, the user will find additional pages that can be accessed by clicking the links. It also includes the logo which displays bigger on smaller devices.
+
 
 ### Features Left to Implement
 
