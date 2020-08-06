@@ -329,7 +329,7 @@ The website  html pages extend from the base.html page where the navbar and foot
 
 - Navbar: Every page features the navbar which signals where users can find each page. The navbar hosts the following links: Home, Shop, My Stariad, About, Contact, Search, Cart, Register and Login. The navbar is responsive and the links collapse on smaller screens, and are replaced by a hamburger menu icon.
 
-- Footer: In this section, the user will find additional pages that can be accessed by clicking the links. It also includes the logo and a form to receive updates.
+- Footer: In this section, the user will find additional pages that can be accessed by clicking the links. It also includes the logo payment and shipping term, warranty, and policy,  and a obtion to subscribe to updates.
 
 
 ### Features Left to Implement

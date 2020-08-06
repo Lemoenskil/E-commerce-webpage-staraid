@@ -11,3 +11,9 @@ def payment_and_shipping(request):
     Sends to a payment_and_shipping page for information purposes only.
     """
     return render(request, 'payment_and_shipping.html')
+
+def returns_and_warranty(request):
+    """
+    Sends to a Returns and Warranty page for information purposes only.
+    """
+    return render(request, 'returns_and_warranty.html')
