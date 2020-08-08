@@ -24,10 +24,3 @@ def newsletter_subscribe(request):
     
     return render(request, "subscribe.html", { 'form' : form })
     
-"""
-<form action="/newsletter/subscribe/" method="post">
-	<input type="hidden" name="csrfmiddlewaretoken" value="VYQQ2witeZwsOth1ZJOfVQhJlNamEFjSeXbPQDqAY40Bl9sImrzrOdw2NvcjVjWT">
-	<p><label for="id_email">Email:</label> <input type="email" name="email" maxlength="254" required="" id="id_email"></p>
-	<button type="submit">Submit</button>
-</form>
-"""

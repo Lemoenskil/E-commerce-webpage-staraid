@@ -1,0 +1,1 @@
+web: gunicorn staraid_ecommerce.wsgi:application

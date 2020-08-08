@@ -14,3 +14,4 @@ progressbar33==2.4
 psycopg2-binary==2.8.5
 boto3==1.12.14
 botocore==1.15.45
+gunicorn-20.0.4
