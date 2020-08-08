@@ -1,0 +1,4 @@
+Hello {{email}}
+
+Welcome to Star Aid  Newsletter and thank you for signing up. 
+
