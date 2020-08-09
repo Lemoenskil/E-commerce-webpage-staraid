@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'newsletter',
     'storages',
     'django_comments',
+    'reviews',
 ]
 
 MIDDLEWARE = [

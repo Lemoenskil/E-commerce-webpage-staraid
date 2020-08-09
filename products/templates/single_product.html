@@ -4,6 +4,8 @@
 
 {% load static %}
 {% load comments %}
+{% load reviews %}
+{% load product_reviews %}
     <!--================Single Product Area =================-->
     <div class="product_image_area">
       <div class="container">
@@ -290,135 +292,50 @@
                   </div>
                   <div class="col-6">
                     <div class="rating_list">
-                      <h3>Based on 3 Reviews</h3>
+                      {% get_review_count for product as review_count %}
+                      <h3>Based on {{ review_count }} Reviews</h3>
                       <ul class="list">
-                        <li>
-                          <a href="#"
-                            >5 Star
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 01</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            >4 Star
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 01</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            >3 Star
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 01</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            >2 Star
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 01</a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            >1 Star
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i> 01</a
-                          >
-                        </li>
+                        {% for rating in "54321" %}
+                          <li>
+                            <a href="#">
+                              {{rating}} Star
+                              {% for star in "12345" %}
+                                <i class="fa {% if star > rating %} fa-star-o {% else %} fa-star {% endif %}"></i>
+                              {% endfor %}
+                              {% get_review_list for product as review_list %}
+                              {% with review_list|has_rating:rating|length as rating_review_count %}
+                                {{rating_review_count}}
+                              {% endwith %}
+                            </a>
+                          </li>
+                        {% endfor %}
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div class="review_list">
-                  <div class="review_item">
-                    <div class="media">
-                      <div class="d-flex">
-                        <!--<img-->
-                        <!--  src="img/product/single-product/review-1.png"-->
-                        <!--  alt=""-->
-                        <!--/>-->
+                  {% get_review_list for product as review_list %}
+                  {% for review in review_list %}
+                    <div class="review_item">
+                      <div class="media">
+                        <div class="d-flex">
+                          <img
+                            src="{% static 'img/anonymous.jpg' %}"
+                            alt=""
+                          />
+                        </div>
+                        <div class="media-body">
+                          <h4>{{ review.user_name }}</h4>
+                          {% for star in "12345" %}
+                            {% with star|add:0 as star_rating %}
+                              <i class="fa {% if star_rating > review.rating %} fa-star-o {% else %} fa-star {% endif %}"></i>
+                            {% endwith %}
+                          {% endfor %}
+                        </div>
                       </div>
-                      <div class="media-body">
-                        <h4>Blake Ruiz</h4>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
+                      <p>{{ review.comment }}</p>
                     </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                    </p>
-                  </div>
-                  <div class="review_item">
-                    <div class="media">
-                      <div class="d-flex">
-                        <!--<img-->
-                        <!--  src="img/product/single-product/review-2.png"-->
-                        <!--  alt=""-->
-                        <!--/>-->
-                      </div>
-                      <div class="media-body">
-                        <h4>Blake Ruiz</h4>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                    </p>
-                  </div>
-                  <div class="review_item">
-                    <div class="media">
-                      <div class="d-flex">
-                        <!--<img-->
-                        <!--  src="img/product/single-product/review-3.png"-->
-                        <!--  alt=""-->
-                        <!--/>-->
-                      </div>
-                      <div class="media-body">
-                        <h4>Blake Ruiz</h4>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                      </div>
-                    </div>
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco laboris nisi ut aliquip ex ea commodo
-                    </p>
-                  </div>
+                  {% endfor %}
                 </div>
               </div>
               <div class="col-lg-6">
@@ -453,67 +370,55 @@
                     </li>
                   </ul>
                   <p>Outstanding</p>
-                  <form
-                    class="row contact_form"
-                    action="contact_process.php"
-                    method="post"
-                    id="contactForm"
-                    novalidate="novalidate"
-                  >
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="name"
-                          name="name"
-                          placeholder="Your Full name"
-                        />
+                  {% if user.is_authenticated %}
+                    {% load reviews i18n %}
+                    {% get_review_form for product as form %}
+                    <form
+                      id="contactForm"
+                      class="row contact_form"
+                      action="{% review_form_target %}"
+                      method="post">
+                      {% csrf_token %}
+                      {% if next %}
+                        <input type="hidden" name="next" value="{{ next }}"/>
+                      {% endif %}
+                      {% for field in form %}
+                        {% if field.is_hidden %}
+                          {{ field }}
+                        {% else %}
+                          <div class="col-md-12">
+                            <div class="form-group" {% if field.errors %} class="error"{% endif %} {% if field.name in "honeypot,url,name,email" %} style="display:none;"{% endif %}>
+                              {% if field.errors %}{{ field.errors }}{% endif %}
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="{{ field.auto_id }}"
+                                name="{{ field.name }}"
+                                placeholder="{{ field.label }}"
+                                {% if field.name == "comment" %}
+                                  onkeyup="document.getElementById('submit-review').disabled = (this.value.length === 0)"
+                                {% endif %}
+                              />
+                            </div>
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                      <div class="col-md-12 text-right">
+                        <button id="submit-review" type="submit" name="post" value="{% trans "Post" %}" class="btn submit_btn" disabled>
+                          Submit Now
+                        </button>
                       </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          name="email"
-                          placeholder="Email Address"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="number"
-                          name="number"
-                          placeholder="Phone Number"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea
-                          class="form-control"
-                          name="message"
-                          id="message"
-                          rows="1"
-                          placeholder="Review"
-                        ></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12 text-right">
-                      <button
-                        type="submit"
-                        value="submit"
-                        class="btn submit_btn"
-                      >
-                        Submit Now
-                      </button>
-                    </div>
-                  </form>
+                    </form>
+                    {{ form.media }}
+                    <style>
+                      .gl-star-rating[data-star-rating] { display: inline-block; }
+                    </style>
+                    <script>
+                      var starRatingControls = new StarRating('#id_rating', {clearable: false, showText: {{ show_rating_text|yesno:"true,false" }}, initialText: '{% trans "Select a rating" %}'});
+                    </script>
+                  {% else %}
+                    <p>Please <a href="{% url 'login' %}?next={{request.path}}">log in</a> to leave a review.</p>
+                  {% endif %}
                 </div>
               </div>
             </div>
