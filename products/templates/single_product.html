@@ -283,16 +283,17 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="row total_rate">
+                  {% get_review_count for product as review_count %}
+                  {% get_rating for product as average_rating %}
                   <div class="col-6">
                     <div class="box_total">
                       <h5>Overall</h5>
-                      <h4>4.0</h4>
-                      <h6>(03 Reviews)</h6>
+                      <h4>{{ average_rating }}</h4>
+                      <h6>({{ review_count }} Reviews)</h6>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="rating_list">
-                      {% get_review_count for product as review_count %}
                       <h3>Based on {{ review_count }} Reviews</h3>
                       <ul class="list">
                         {% for rating in "54321" %}
@@ -325,7 +326,7 @@
                           />
                         </div>
                         <div class="media-body">
-                          <h4>{{ review.user_name }}</h4>
+                          <h4>{{ review.user }}</h4>
                           {% for star in "12345" %}
                             {% with star|add:0 as star_rating %}
                               <i class="fa {% if star_rating > review.rating %} fa-star-o {% else %} fa-star {% endif %}"></i>
@@ -343,31 +344,13 @@
                   <h4>Add a Review</h4>
                   <p>Your Rating:</p>
                   <ul class="list">
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-star"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-star"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-star"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-star"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i class="fa fa-star"></i>
-                      </a>
-                    </li>
+                    {% for rating in "12345" %}
+                      <li>
+                        <a href="#">
+                          <i id="select_rating_{{rating}}" class="fa fa-star" onclick="document.getElementById('id_rating').value={{rating}}; [1,2,3,4,5].forEach( i => { star=$('#select_rating_' + i); if(i > {{rating}}) { star.removeClass('fa-star').addClass('fa-star-o'); } else { star.removeClass('fa-star-o').addClass('fa-star'); } }); "></i>
+                        </a>
+                      </li>
+                    {% endfor %}
                   </ul>
                   <p>Outstanding</p>
                   {% if user.is_authenticated %}
@@ -379,15 +362,13 @@
                       action="{% review_form_target %}"
                       method="post">
                       {% csrf_token %}
-                      {% if next %}
-                        <input type="hidden" name="next" value="{{ next }}"/>
-                      {% endif %}
+                      <div><input type="hidden" name="next" value="{{ request.path }}"/></div>
                       {% for field in form %}
                         {% if field.is_hidden %}
                           {{ field }}
                         {% else %}
                           <div class="col-md-12">
-                            <div class="form-group" {% if field.errors %} class="error"{% endif %} {% if field.name in "honeypot,url,name,email" %} style="display:none;"{% endif %}>
+                            <div class="form-group" {% if field.errors %} class="error"{% endif %} {% if field.name in "honeypot,url,name,email,rating" %} style="display:none;"{% endif %}>
                               {% if field.errors %}{{ field.errors }}{% endif %}
                               <input
                                 type="text"
@@ -397,6 +378,9 @@
                                 placeholder="{{ field.label }}"
                                 {% if field.name == "comment" %}
                                   onkeyup="document.getElementById('submit-review').disabled = (this.value.length === 0)"
+                                {% endif %}
+                                {% if field.name == "rating" %}
+                                  value="5"
                                 {% endif %}
                               />
                             </div>
