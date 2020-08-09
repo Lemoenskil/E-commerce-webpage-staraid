@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
+    'django.contrib.sites',
     'crispy_forms',
     'compressor',
     'accounts',
@@ -52,6 +53,7 @@ INSTALLED_APPS = [
     'home',
     'newsletter',
     'storages',
+    'django_comments',
 ]
 
 MIDDLEWARE = [
@@ -218,3 +220,4 @@ COMPRESS_PRECOMPILERS = (
     ('text/x-scss', 'django_libsass.SassCompiler'),
 )
 
+SITE_ID = 5

@@ -39,6 +39,6 @@ urlpatterns = [
     re_path(r'^checkout/', include(urls_checkout)),
     re_path(r'^shipping/', include(urls_shipping)),
     re_path(r'^newsletter/', include(urls_newsletter)),
+    re_path(r'^comments/', include('django_comments.urls')),
     re_path(r'',include(index_pats)),
 ]
-
