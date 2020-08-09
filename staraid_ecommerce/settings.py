@@ -212,6 +212,7 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = os.environ.get("EMAIL_ADDRESS")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")

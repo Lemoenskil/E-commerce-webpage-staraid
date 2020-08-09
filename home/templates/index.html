@@ -106,13 +106,61 @@
   </section>
   <!--================ End Offer Area =================-->
 
+  <!--================ Start Review Area =================-->
+  <section class="section-gap">
+    <div class="container"">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="main_title">
+            <h2><span>Star Aid reviews</span></h2>
+            <p></p>
+          </div>
+        </div>
+        {% for product in products %}
+        {% if product.on_offer %}
+          {% get_review_list for product as review_list %}
+          {% for review in review_list %}
+            {% if forloop.counter0 < 3 %}
+              <div class="col-lg-4 col-md-6">
+                <div class="review_item">
+                  <div class="media">
+                    <div class="d-flex">
+                      <img
+                        src="{% static 'img/anonymous.jpg' %}"
+                        alt=""
+                      />
+                    </div>
+                    <div class="media-body">
+                      <h4>{{ review.user }}</h4>
+                      {% for star in "12345" %}
+                        {% with star|add:0 as star_rating %}
+                          <i class="fa {% if star_rating > review.rating %} fa-star-o {% else %} fa-star {% endif %}"></i>
+                        {% endwith %}
+                      {% endfor %}
+                      <div class="text-wrap">
+                        <p>{{ review.comment }}</p>
+                      </div>
+                      <a href="{% url 'single_product' product.id %}" class="blog_btn">Learn More <span class="ml-2 ti-arrow-right"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!--================ End Review Area =================-->
+
   <!--================ Feature Product Area =================-->
   <section class="feature_product_area section_gap_bottom_custom">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-12">
           <div class="main_title">
-            <h2><span>Featured product</span></h2>
+            <h2><span>Featured products</span></h2>
             <p></p>
           </div>
         </div>
@@ -156,56 +204,4 @@
     </div>
   </section>
   <!--================ End Feature Product Area =================-->
-
-
-
-
-  <!--================ Start Blog Area =================-->
-  <section class="blog-area section-gap">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="main_title">
-            <h2><span>latest reviews</span></h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        {% for product in products %}
-        {% if product.on_offer %}
-          {% get_review_list for product as review_list %}
-          {% for review in review_list %}
-            <div class="col-lg-4 col-md-6">
-              <div class="single-blog">
-                <div class="thumb">
-                  <img class="img-fluid" src="#" alt="">
-                </div>
-                <div class="short_details">
-                  <div class="meta-top d-flex">
-                    <a href="#">By {{ review.user }}</a>
-                  </div>
-                  <a class="d-block" href="single-blog.html">
-                    {% for star in "12345" %}
-                      {% with star|add:0 as star_rating %}
-                        <i class="fa {% if star_rating > review.rating %} fa-star-o {% else %} fa-star {% endif %}"></i>
-                      {% endwith %}
-                    {% endfor %}
-                  </a>
-                  <div class="text-wrap">
-                    <p>
-                      {{ review.comment }}
-                    </p>
-                  </div>
-                  <a href="{% url 'single_product' product.id %}" class="blog_btn">Learn More <span class="ml-2 ti-arrow-right"></span></a>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-  <!--================ End Blog Area =================-->
 {% endblock %}
