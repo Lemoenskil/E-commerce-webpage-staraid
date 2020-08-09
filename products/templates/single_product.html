@@ -342,18 +342,18 @@
               <div class="col-lg-6">
                 <div class="review_box">
                   <h4>Add a Review</h4>
-                  <p>Your Rating:</p>
-                  <ul class="list">
-                    {% for rating in "12345" %}
-                      <li>
-                        <a href="#">
-                          <i id="select_rating_{{rating}}" class="fa fa-star" onclick="document.getElementById('id_rating').value={{rating}}; [1,2,3,4,5].forEach( i => { star=$('#select_rating_' + i); if(i > {{rating}}) { star.removeClass('fa-star').addClass('fa-star-o'); } else { star.removeClass('fa-star-o').addClass('fa-star'); } }); "></i>
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                  <p>Outstanding</p>
                   {% if user.is_authenticated %}
+                    <p>Your Rating:</p>
+                    <ul class="list">
+                      {% for rating in "12345" %}
+                        <li>
+                          <a href="#">
+                            <i id="select_rating_{{rating}}" class="fa fa-star" onclick="document.getElementById('id_rating').value={{rating}}; [1,2,3,4,5].forEach( i => { star=$('#select_rating_' + i); if(i > {{rating}}) { star.removeClass('fa-star').addClass('fa-star-o'); } else { star.removeClass('fa-star-o').addClass('fa-star'); } }); "></i>
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                    <p>Outstanding</p>
                     {% load reviews i18n %}
                     {% get_review_form for product as form %}
                     <form
