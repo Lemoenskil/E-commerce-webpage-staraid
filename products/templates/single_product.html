@@ -279,14 +279,13 @@
                     {% get_comment_form for product as form %}
                     <form class="row contact_form" id="contactForm" action="{% comment_form_target %}" method="post">
                       {% csrf_token %}
-                      {% if next %}
-                        <div><input type="hidden" name="next" value="{{ next }}"/></div>{% endif %}
+                      <div><input type="hidden" name="next" value="{{ request.path }}"/></div>
                       {% for field in form %}
                         {% if field.is_hidden %}
                           <div>{{ field }}</div>
                         {% else %}
                           <div class="col-md-12">
-                            <div class="form-group" {% if field.errors %} class="error"{% endif %} {% if field.name == "honeypot" or field.name == "url" %} style="display:none;"{% endif %}>
+                            <div class="form-group" {% if field.errors %} class="error"{% endif %} {% if field.name in "honeypot,url,name,email" %} style="display:none;"{% endif %}>
                               {% if field.errors %}{{ field.errors }}{% endif %}
                               <input
                                 type="text"
@@ -294,21 +293,22 @@
                                 id="{{ field.id }}"
                                 name="{{ field.name }}"
                                 placeholder="{{ field.label }}"
-                                {% if field.name == "name" %} value="{{ user.get_username }}" readonly {% endif %}
-                                {% if field.name == "email" %} value="{{ user.email }}" readonly {% endif %}
+                                {% if field.name == "comment" %}
+                                  onkeyup="document.getElementById('submit-comment').disabled = (this.value.length === 0)"
+                                {% endif %}
                               />
                             </div>
                           </div>
                         {% endif %}
                       {% endfor %}
                       <div class="col-md-12 text-right">
-                        <button type="submit" name="post" value="{% trans "Post" %}" class="btn submit_btn">
+                        <button id="submit-comment" type="submit" name="post" value="{% trans "Post" %}" class="btn submit_btn" disabled>
                           Submit Now
                         </button>
                       </div>
                     </form>
                   {% else %}
-                    <p>Please <a href="{% url 'auth_login' %}">log in</a> to leave a comment.</p>
+                    <p>Please <a href="{% url 'login' %}?next={{request.path}}">log in</a> to leave a comment.</p>
                   {% endif %}
                 </div>
               </div>
