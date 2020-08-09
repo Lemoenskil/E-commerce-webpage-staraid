@@ -9,7 +9,7 @@ As it is nich market mostly focus on hobbiest the website will need to have a lo
 There will also be extra product availbe that the customer can buy that is needed for his setup.  For and add on a blog will be place where the more experience customer can share his photo and give user tips new customer
 in this i tried to buld a the brand name.  The website will also have a facebook link where we will share system updates and happy customer blogs.  The website will also be use for support for current and prospective customer to contact Staraid.
 
-The project can be viewed [](herokuapp.com/)
+The project can be viewed [at the Heroku hosted site](https://staraid-ecommerce.herokuapp.com/).
 
 ## Specification / Design
 
