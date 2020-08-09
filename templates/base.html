@@ -40,12 +40,7 @@
           <a class="navbar-brand logo_h" href={% url 'index' %}>
             <img class ="logo_nav" src="{% static 'img/staraid-color.svg' %}" alt="" />
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
             <div class="row w-100 mr-0">
@@ -66,7 +61,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-item submenu dropdown">
+<!--                  <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">My StarAid</a>
                     <ul class="dropdown-menu">
@@ -77,21 +72,24 @@
                         <a class="nav-link" href="single-blog.html">Blog Details</a>
                       </li>
                     </ul>
-                  </li>
+                  </li>-->
                   <li class="nav-item submenu dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                       aria-expanded="false">About</a>
                     <ul class="dropdown-menu">
                       <li class="nav-item">
-                        <a class="nav-link" href="tracking.html">Tracking</a>
+                        <a class="nav-link" href="#">Star Aid</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="elements.html">Elements</a>
+                        <a class="nav-link" href="#">Q&A</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">In the news</a>
                       </li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -233,8 +231,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <div class="col-lg-4 col-md-12 footer-social">
           <a href="https://www.facebook.com/staraidautoguider"><i class="fa fa-facebook"></i></a>
           <a href="https://www.youtube.com/channel/UCrDLizNZ8YcBnLKx-2jImJQ"><i class="fa fa-youtube"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-behance"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="{% url 'contact' %}"><i class="fa fa-envelope"></i></a>
         </div>
       </div>
     </div>

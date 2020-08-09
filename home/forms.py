@@ -13,7 +13,7 @@ class ContactForm(forms.Form):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['contact_name'].label = "Your name:"
         self.fields['contact_email'].label = "Your email:"
-        self.fields['content'].label = "Enter Message?"
+        self.fields['content'].label = "Enter Message"
         self.helper = FormHelper()
         self.helper.form_tag = False
         self.helper.layout = Layout(
