@@ -269,7 +269,7 @@ For the businnes this website will be of value as it is our cashregister for rec
 
 #### Site Map for e-commerce website
 
-![Site Map](/doc/sitemap_staraid.png)                
+![Site Map](/doc/sitemap_staraid_new.png)                
 
 ### Mock-up’s
 
