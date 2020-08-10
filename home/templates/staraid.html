@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+  <section class="section_gap">
+        <div class="container">
+            <div class="main_title f-heading">
+                <h1 class="uppercase f-heading_c"> Features</h1>
+                <h2 class="f-heading_c">StarAid Revolution</h2>
+             </div>
+             
+        <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                  <div class="p-5">
+                    <div class="item embed-responsive embed-responsive-21by9"> <iframe class="embed-responsive-item" width="100%" max-height="900px" src="https://www.youtube.com/embed/q8LVzth3bic" frameborder="0" ></iframe> </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                  <div class="p-5">
+                    <h2>No configuration</h2>
+                    <ul class = "list-inline bullets">
+                        <li><b>Autoguiding starts automatically</b> as soon as you power on your StarAid. Point your telescope anywhere in the sky, and StarAid will find multiple guide stars. Even under a full moon or in a rich star cloud in the milky way under pristine skies.</li>
+                        <li>No laptop or any other device needed</li>
+                        <li>Guiding <strong>automatically resumes</strong> when clouds pass by or when you move your mount to a new location</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                      <div class="p-5">
+                        <h2>Automatically optimised guiding parameters</h2>
+                            <p>Let AI do the tedious work</p>
+                        <ul>
+                            <li>StarAid automatically monitors the seeing conditions and the mount response</li>
+                            <li>It uses Artificial Intelligence to find the optimal guide parameters</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h2>Accurate and fast tracking for the best image quality</h2>
+                        <p><b>Accurate:</b></p>
+                    <ul>
+                        <li>Recognises and <strong>tracks 1 to 20 stars</strong> simultaneously</li>
+                        <li>Advanced, high performance proprietary star recognition and centering algorithm</li>
+                        <li>Guiding accuracy <strong>not affected by mount backlash</strong></li><li>Up to <b>30% sharper photos</b></li>
+                    </ul>
+                        <p><b>Fast:</b></p>
+                    <ul>
+                        <li>Sends up to <b>5 corrections per second</b> (5Hz) to the mount to minimise drift effects and correct some of the seeing (5Hz)</li>
+                        <li>Finishes mount calibration in 4-30 seconds</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <div class="item embed-responsive embed-responsive-21by9"> <iframe class="embed-responsive-item" width="100%" max-height="900px" src="https://www.youtube.com/embed/NPnd8fSdYOM" frameborder="0" ></iframe> </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="p-5">
+                    <h2>Live LED status feedback</h2>
+                        <p>Always know what StarAid is doing</p>
+                    <ul>
+                        <li>LEDs indicate the status of guiding, warnings or errors</li>
+                        <li>Different patterns for specific actions</li><li>No need to connect your laptop or phone</li>
+                        <li>Adjust their brightness or turn them off completely from the StarAid App</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                  <div class="p-5">
+                    <img class="img-fluid" src="{% static 'img/Tracked-comet.jpg' %}" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                  <div class="p-5">
+                    <h2>Let there be rock!</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        
+        
+    </div>
+  </section>
+
+
+{% endblock %}

@@ -15,6 +15,12 @@ def payment_and_shipping(request):
     Sends to a payment_and_shipping page for information purposes only.
     """
     return render(request, 'payment_and_shipping.html')
+    
+def staraid(request):
+    """
+    Sends to a features page for information purposes only.
+    """
+    return render(request, 'staraid.html')
 
 def returns_and_warranty(request):
     """
