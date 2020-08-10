@@ -210,6 +210,8 @@
 }
 
 
+/* -================Staraid page ================= */
+
 .f-heading {
     background-image: url("../img/M31v3.jpg");
     background-position: center center;
@@ -232,4 +234,12 @@
     height: 781px; 
     left: 0px;
     top:0px;
+}
+
+.widget-image-caption {
+    text-align: left;
+    font-size: 10px;
+    letter-spacing: 0px;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    margin-top: 13px;
 }
