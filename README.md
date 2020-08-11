@@ -19,10 +19,12 @@ When the customer has made his disision to buy the products he will need to sign
 Then the customer can proceed the to the payment type (which for this website will be a credit card).
 After the payment have been successful the customer will receive and invoice as a mail.
 
-The customer can use his profile to review and comment and rate the product.  There will also be a blog available where the customer can share his/her experience tell about his setup and condition and place a photo.
+The customer can use his profile to review and comment and rate the product.  (For the future I want a blog available where the customer can share his/her experience tell about his setup and condition and place a photo).
 
-Prospective customer can contact us via form (I will be looking at a chatbot for the future) but for customer who have order the product need to loging that we have there product availble and can be of better assistance
-as for some instances they will need to add a error log.
+The home page will have a carousel where you can get a overview of picture and features,  a on offer area and an a featured product area with review will be be available.  Als review on the on offer product will be availble
+
+Prospective customer can contact us via form (I will be looking at a chatbot for the future and  for customer who have order the product need to loging that we have there product availble and can be of better assistance
+as for some instances they will need to add a error log).
 
 The design of the website can been seen in more detail in the sitemap in mokups, but we will use a mostly white back ground with a bar of purple and blue sumulatin twilight. I will be using a bootstrap standard template.
 
@@ -45,9 +47,9 @@ The website need to include the following
 - View infromation ex Q&A, review 
 - Browse the website with out signing in 
 - Only user signed in can place order write a review and blog.
-- Register user: ability to change, delete reviews and blogs
+- Register user: ability to change, (delete reviews and blogs is for future implementation)
 - Fotos and videos as as infromation on the product 
-- Q&A page
+- Have terms, conditions and policies 
 
 I need the following for the website
 - logo/ Name
@@ -201,7 +203,7 @@ Acceptance criteria:
 * Change the review
 * Delete the review
 
-#### Blog
+#### Blog (future implementation)
 
 As a customer I want to write a blog about astrofotograpy and how staraid has improved my experience
 
@@ -254,7 +256,7 @@ For the businnes this website will be of value as it is our cashregister for rec
 - Chart functionality
 - Check out functionality which include payment and shipment
 - Review functionality
-- Blog post
+- Blog post (for the future)
 - Customer profile
 - Order overview for Customer service
 - Stock overview for Logistics
