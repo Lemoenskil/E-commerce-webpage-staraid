@@ -21,6 +21,12 @@ def staraid(request):
     Sends to a features page for information purposes only.
     """
     return render(request, 'staraid.html')
+    
+def qa(request):
+    """
+    Sends to q&a page for information purposes only.
+    """
+    return render(request, 'q&a.html')
 
 def returns_and_warranty(request):
     """
