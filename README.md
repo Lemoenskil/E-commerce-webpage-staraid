@@ -3,32 +3,30 @@
 # E-commerce-website-Staraid
 
 This web application has been designed and built for the requirements of the "E-commerce-website" project of the Code Institute Full-Stack Software Development course.  It is intended to be used as a  e_comerce website where you can buy the product,
-and  the process from order to shipment.  Which will include a chart, payment, shipping and invoicing.   There will also be a support which will be for before and after sales.
+and  the process from order to shipment.  Which will include a chart, payment, shipping and for the future invoicing.   There will also be a support which will be for before and after sales.
 Staraid is a autoguider that is used when you are tracking stars for astrofotograpy it is a higly texhnical product and is intended to make life easier for the not that techinical or entered astrofototographer.
 As it is nich market mostly focus on hobbiest the website will need to have a lot of infromation on it.  They will also be searching for review or current users as it is a pricy product it will not be a impulse buy.
-There will also be extra product availbe that the customer can buy that is needed for his setup.  For and add on a blog will be place where the more experience customer can share his photo and give user tips new customer
-in this i tried to buld a the brand name.  The website will also have a facebook link where we will share system updates and happy customer blogs.  The website will also be use for support for current and prospective customer to contact Staraid.
+There will also be extra product availbe that the customer can buy that is needed for his setup and addons for StarAid.  For the future a blog will be place where the more experience customer can share his photo and give user tips new customer
+in this to try  buld a the brand name.  The website will also have a facebook link where we will share system updates and happy customer blogs.  The website will also be use for support for current and prospective customer to contact Staraid.
 
 The project can be viewed [at the Heroku hosted site](https://staraid-ecommerce.herokuapp.com/).
 
 ## Specification / Design
 
-The e commerce websit for staraid will focus on the main product which is the autoguider with a few add ons that you can buy for the telescope setup.   The website main fuction is to have a meduim to place a order and settle the payment.
-A potential shopper can brows the web store to get infromation about the product and and create a shopping chart  (information would be like question and awnser and or the videos and reviews on the web site).
-When the customer has made his disision to buy the products he will need to sign in and create a profile to proceed with the order.  After registering he can proceed to choose the metohod of shipment which will add and extra almount to the totol.
+The e commerce websit for staraid will focus on the main product which is the autoguider with a few addons that you can buy for the telescope setup.   The website main function is to have a meduim to place a order and settle the payment.
+A potential shopper can brows the web store to get information about the product and and create a shopping chart  (information would be like question and awnser and or the videos and reviews on the web site).
+When the customer has made his d to buy the products he will need to sign in and create a profile to proceed with the order.  After registering he can proceed to choose the metohod of shipment which will add an extra amount to the total.
 Then the customer can proceed the to the payment type (which for this website will be a credit card).
-After the payment have been successful the customer will receive and invoice as a mail.
+After the payment have been successful the customer will receive and invoice as a mail.(for future implementation)
 
 The customer can use his profile to review and comment and rate the product.  (For the future I want a blog available where the customer can share his/her experience tell about his setup and condition and place a photo).
-
-The home page will have a carousel where you can get a overview of picture and features,  a on offer area and an a featured product area with review will be be available.  Als review on the on offer product will be availble
-
+The home page will have a carousel where you can get a overview of picture and features,  a on offer area and an a featured product area with review will be be available.  Also review on the on offer product will be availble on the landing page.
 Prospective customer can contact us via form (I will be looking at a chatbot for the future and  for customer who have order the product need to loging that we have there product availble and can be of better assistance
 as for some instances they will need to add a error log).
 
 The design of the website can been seen in more detail in the sitemap in mokups, but we will use a mostly white back ground with a bar of purple and blue sumulatin twilight. I will be using a bootstrap standard template.
 
-In adding extra value added functionality I will be looking at tool and Api that can give weather pattern to when it will be a clear night for astrofotograpy also maybe adding best spot for astrofototographer.
+In adding extra value added functionality in the future, I will be looking at tool and Api that can give weather pattern to when it will be a clear night for astrofotograpy also maybe adding best spot for astrofototographer.
  
 ## UX
  
@@ -38,7 +36,7 @@ The E-commerce-website-Staraid has the following requirements
 
 Their primary target audiences profesional, hobbiest and starting astrofototographers
 The website need to include the following 
-- Database with product, prices, stock, customer, blog, photo's and review (see detailed database digram)
+- Database with product, prices, stock, customer, photo's and review (see detailed database digram)
 - Ability to add new product to your shopping chart
 - The ability to change existing shopping chart
 - The ability to delete shopping chart
@@ -46,17 +44,18 @@ The website need to include the following
 - Search for products
 - View infromation ex Q&A, review 
 - Browse the website with out signing in 
-- Only user signed in can place order write a review and blog.
+- Only user signed in can place order write a review and blog.(blogs are for future implementation)
 - Register user: ability to change, (delete reviews and blogs is for future implementation)
 - Fotos and videos as as infromation on the product 
 - Have terms, conditions and policies 
 
 I need the following for the website
 - logo/ Name
-- Data Base for product, prices, stock, review, blogs
+- Data Base for product, prices, stock, review, b
 - Picture, videos
 - Bootstrap template
 - Stripe setup
+-
 
 ### Stakeholders
 
@@ -64,8 +63,8 @@ The following stakeholders wil interact with the website:
 
 * Customer
 * Content Manager
-* Accounting
-* Fullfillment specialist
+* Accounting (future implementation)
+* Fullfillment specialist (future implementation)
 * Logistics
 
 ### User stories
@@ -93,8 +92,8 @@ Acceptance criteria:
 * Can select a rating from the review page
 * Can enter a description of my experience
 * Can submit my review
-* Can update my review
-* Can delete my review
+* Can update my review (future implementation)
+* Can delete my review (future implementation)
 
 #### Change Shopping chart
 
@@ -117,13 +116,13 @@ Acceptance criteria:
 * Trigger checkout from any page if there are items in the chart
 * Need to sign in
 * If not registered need to register a profile (to get shipping and payment details)
-* Show total include tax and shipping before finalising
-* Show confrormation messages after finalising.
-* Verify payment vai payment processor
+* Show total include tax and shipping before finalising 
+* Show confrormation messages after finalising.(future implementation)
+* Verify payment vai payment processor (future implementation)
 
 #### Register
 
-As a customer i want to register in order to blog and order products.
+As a customer i want to register in order to review and order products.
 
 Acceptance criteria:
 
@@ -133,7 +132,7 @@ Acceptance criteria:
 * Show on the navbar that you are signed in
 * Give option in the navbar to sign out
 
-#### View my orders
+#### View my orders (future implementation)
 
 As a customer I want to review my orders so I can see my order history
 
@@ -154,22 +153,22 @@ Acceptance criteria:
 * Add and remove products
 * Modify product images
 
-####  Order report
+####  Order report (future implementation)
 
-As a fullfilment officer I want to prinT a order report  prepare the order confirm the tracking nr back
+As a fullfilment officer I want to print a order report  prepare the order confirm the tracking nr back
 
 Acceptance criteria:
 
 * Print a report for all open orders
 * Updating order with the tracking nr from the transporter
 
-#### Order Analitcs
+#### Order Analytcs (future implementation)
 
 As Account I want to see the order analitics and the revenue that I can track it against our goals.
 
 Acceptance criteria:
 
-* View dashboars with total order order and euro count
+* View dashboards with total order order and euro count
 * Adjust the range with options today, this month, last 30 days, last 90 days, a year
 * See chart comparing order revenu with total cost per product
 
@@ -180,8 +179,8 @@ As a logistics officer I want to have an overview/update on the stock levels
 Acceptance criteria:
 
 * Updated the stock levels of product
-* View a list of backorders 
-* View a dashboard that give the stock level and the replenishment times
+* View a list of backorders (future implementation)
+* View a dashboard that give the stock level and the replenishment times (future implementation)
 
 #### Customer support
 
@@ -200,8 +199,8 @@ Acceptance criteria:
 * Loging as a customer
 * Give a rating out of 5 (stars)
 * Sudmid the written review
-* Change the review
-* Delete the review
+* Change the review (future implementation)
+* Delete the review (future implementation)
 
 #### Blog (future implementation)
 
@@ -217,7 +216,7 @@ Acceptance criteria:
 * Geo tag setup
 * And select from a list telescope setup
 
-#### Profile
+#### Profile (future implementation)
 
 As a customer I want to have insight in to mystarid profile to update and see software updates
 
