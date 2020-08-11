@@ -2,6 +2,10 @@
 {% load bootstrap_tags %}
 {% block content %}
  <div class="container">
+    <div class="check_title">
+        <h2> Please registier to loging and proceed to checkout
+              <a href="{% url 'register' %}">Click here to register</a>
+    </h2>
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
             <legend>Login</legend>
