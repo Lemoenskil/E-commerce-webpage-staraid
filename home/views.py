@@ -27,6 +27,12 @@ def qa(request):
     Sends to q&a page for information purposes only.
     """
     return render(request, 'q&a.html')
+    
+def news(request):
+    """
+    Sends to q&a page for information purposes only.
+    """
+    return render(request, 'news.html')
 
 def returns_and_warranty(request):
     """
