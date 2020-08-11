@@ -44,7 +44,7 @@
 		</div>
 		<div>
 		
-			<p>General questions</p>
+			<a id="general"><p>General questions</p></a>
 			
 			<p><b>Is StarAid just an autoguider?</b>
 			<br>
@@ -62,10 +62,9 @@
 			<br>
 			Yes, all StarAid functions operate without the need for an Internet connection.</p>
 			
-			<p>Mount support</p>
+			<a id="mountsupport"><p>Mount support</p></a>
 			
-			<p><b>Can I use
-			StarAid with the Losmandy DDS control box?</b>
+			<p><b>Can I use StarAid with the Losmandy DDS control box?</b>
 			<br>
 			Yes, you can. Please take care to select “Losmandy DDS” from the configuration
 			page in the StarAid App. Your setting will be stored in the device.</p>
@@ -80,53 +79,29 @@
 			
 			<p>Astro-Physics 1100</p>
 			
-			<p>
+			<p>Astro-Physics 1200</p>
 			
-			Astro-Physics 1200</p>
+			<p>Astro-Physics Mach1</p>
 			
-			<p>
+			<p>Avalon mount</p>
 			
-			Astro-Physics Mach1</p>
+			<p>Celestron AVX</p>
 			
-			<p>
+			<p>Losmandy GM-8 with original DDS</p>
 			
-			Avalon mount</p>
+			<p>Losmandy G-11</p>
 			
-			<p>
+			<p>Meade FORK mount</p>
 			
-			Celestron AVX</p>
+			<p>RainbowAstro RST150H</p>
 			
-			<p>
+			<p>Sky-Watcher EQ5</p>
 			
-			Losmandy GM-8 with original DDS</p>
+			<p>Sky-Watcher EQ6 and EQ6-R</p>
 			
-			<p>
+			<p>Sky-Watcher EQ8</p>
 			
-			Losmandy G-11</p>
-			
-			<p>
-			
-			Meade FORK mount</p>
-			
-			<p>
-			
-			RainbowAstro RST150H</p>
-			
-			<p>
-			
-			Sky-Watcher EQ5</p>
-			
-			<p>
-			
-			Sky-Watcher EQ6 and EQ6-R</p>
-			
-			<p>
-			
-			Sky-Watcher EQ8</p>
-			
-			<p>
-			
-			Vixen Super Polaris types with BoxDorfer MTS-3 kit</p>
+			<p>Vixen Super Polaris types with BoxDorfer MTS-3 kit</p>
 			
 			<p><b>My mount
 			is not listed above. Can I still use StarAid?</b>
@@ -141,27 +116,24 @@
 			some quirks. In this case please<a href="{% url 'contact' %}">contact us</a>, and we’ll
 			investigate whether we can enable support for your mount in the next release.</p>
 			
-			<p>Operation</p>
+			<a id="operation"><p>Operation</p></a>
 			
-			<p>Connectivity</p>
+			<a id="connectivity"><p>Connectivity</p></a>
 			
-			<p><b>Can I
-			really use StarAid without a laptop?</b>
+			<p><b>Can I really use StarAid without a laptop?</b>
 			<br>
 			Yes, you can. Autoguiding starts as soon as you apply power. Some features
 			(polar alignment, sky recognition and focusing) require that you interact with
 			StarAid via any mobile device or a laptop.</p>
 			
-			<p><b>Do I need
-			a phone/laptop/tablet to use StarAid?</b>
+			<p><b>Do I need a phone/laptop/tablet to use StarAid?</b>
 			<br>
 			No, you don’t. As soon as you power StarAid on, guiding starts. This is the
 			default operating mode and is fully stand-alone. Just power StarAid on and go!
 			It detects when the telescope moves, clouds pass by or other disturbances
 			happen, and will automatically continue.</p>
 			
-			<p><b>Is the
-			USB cable needed to work with StarAid?</b>
+			<p><b>Is the USB cable needed to work with StarAid?</b>
 			<br>
 			No. USB connectivity is provided for your convenience. It allows you to
 			configure and test StarAid on your tabletop, with just the USB cable providing
@@ -195,52 +167,39 @@
 			restrictions. If the length exceeds 5m, consider using a 12V power supply to
 			compensate for the voltage drop.</p>
 			
-			<p>Power</p>
+			<a id="power"><p>Power</p></a>
 			
-			<p><b>Can I
-			power StarAid from the USB cable alone?</b>
+			<p><b>Can I power StarAid from the USB cable alone?</b>
 			<br>
 			Yes, but only the provided, short USB cable will work. The built-in WiFi will
 			be disabled unless you power StarAid via the Uplink port. You can use a longer
 			USB 2.0 certified cable for connectivity, but you’ll need to provide
 			independent power via the Uplink port.</p>
 			
-			<p><b>Can I
-			operate StarAid from a powerbank?</b>
+			<p><b>Can I operate StarAid from a powerbank?</b>
 			<br>
 			Yes, you can. With a quality 10.000mAh USB powerbank you can operate StarAid
 			for the entire night (12 hours). However, it will have to use a step-up voltage
 			converter.The voltage of USB powerbanks is usually too low for StarAid, which
 			requires a minimum of 6V on the uplink port.</p>
 			
-			<p><b>Can I
-			operate StarAid from a regular lead-acid battery?</b><br>
+			<p><b>Can I operate StarAid from a regular lead-acid battery?</b><br>
 			Yes. StarAid is designed to be able to handle up to 13.8V standard batteries
 			directly. You can monitor the supply voltage from the App.</p>
 			
-			<p><b>What
-			power supply do you recommend?</b>
+			<p><b>What power supply do you recommend?</b>
 			<br>
 			If you want to use your own power supply, please consider the following:</p>
 			
-			<p>
+			<p>StarAid supports an input voltage on the Uplink port of 6-13.8V.</p>
 			
-			StarAid supports an input voltage on the Uplink port of 6-13.8V.</p>
+			<p>The supply should be rated for 400mA continuous load.</p>
 			
-			<p>
+			<p>Only use a regulated power supply.</p>
 			
-			The supply should be rated for 400mA continuous load.</p>
+			<p>Application of voltage above 15V for longer durations may damage StarAid.</p>
 			
-			<p>
-			
-			Only use a regulated power supply.</p>
-			
-			<p>
-			
-			Application of voltage above 15V for longer durations may damage
-			StarAid.</p>
-			
-			<p>LEDs</p>
+			<a id="leds"><p>LEDs</p></a>
 			
 			<p><b>The LEDs
 			are too bright. Can I reduce their brightness?</b><br>
@@ -249,18 +208,16 @@
 			after powering on cannot be adjusted. Once operational, the configured
 			brightness is used.</p>
 			
-			<p><b>Can I
-			turn off the LEDs?</b>
+			<p><b>Can I turn off the LEDs?</b>
 			<br>
 			Yes, you can. You can control this from the App.</p>
 			
-			<p><b>Can I
-			define my own LED colors and patterns?</b>
+			<p><b>Can I define my own LED colors and patterns?</b>
 			<br>
 			No. The manual and quick-start guide point to specific LED patterns to watch
 			for and diagnose.</p>
 			
-			<p>Guiding</p>
+			<a id="guiding"><p>Guiding</p></a>
 			
 			<p><b>How do I configure and calibrate StarAid?</b><br>
 			You don’t need to do this. Just turn on your StarAid, and it will just work.
@@ -275,8 +232,7 @@
 			Yes. If you can see stars with your eyes in the direction your pointing StarAid
 			at, so can StarAid.</p>
 			
-			<p><b>Will it
-			always find a guide star, no matter where I’m pointing at, even under a full
+			<p><b>Will it always find a guide star, no matter where I’m pointing at, even under a full
 			moon?</b>
 			<br>
 			Yes. If you can see stars with your eyes in the direction your pointing StarAid
@@ -302,8 +258,7 @@
 			you can tie down your setup such that there is no significant flexure, it is
 			always better to use a guide scope.</p>
 			
-			<p><b>How can I
-			enable off-axis guiding?</b>
+			<p><b>How can I enable off-axis guiding?</b>
 			<br>
 			We recommend not to do this (see previous point). Therefore, off-axis guiding
 			is off by default. You can enable it from the “Autoguiding” menu from the App.</p>
@@ -363,21 +318,18 @@
 			The only solution to prevent the guiding from oscillating is to smooth the
 			seeing out by taking relatively long exposures. This is far from ideal:</p>
 			
-			<p>The
-			effective correction bandwidth is twice the frame rate (0.5Hz when guiding at a
+			<p>The effective correction bandwidth is twice the frame rate (0.5Hz when guiding at a
 			1s and 0.25Hz when guiding at 8s). In this relatively large time span, drift
 			starts to play a role. This is due to factors such as polar alignment and wind.
 			If this goes uncorrected, your final image is more blurred (larger stars).
 			Seeing can also vary significantly from second to second, further blurring
 			stars in your final image if it goes uncorrected.</p>
 			
-			<p>StarAid
-			avoids these pitfalls by doing very fast updates. Drift effects are effectively
+			<p>StarAid avoids these pitfalls by doing very fast updates. Drift effects are effectively
 			minimized and some of the seeing is corrected, resulting in up to 30% sharper
 			images (smaller stars).</p>
 			
-			<p><b>Can I
-			control the aggressiveness or other guiding parameters?</b><br>
+			<p><b>Can I control the aggressiveness or other guiding parameters?</b><br>
 			No. This is deliberately not possible. StarAid automatically monitors the
 			seeing conditions and the mount response in order to find the optimal guide
 			parameters. It does so always, and all the time. That’s our philosophy! Why
@@ -425,7 +377,7 @@
 			<p><b>DoesStarAid support dithering?</b>
 			<br>Refer to Camera control</a>below.</p>
 			
-			<p>Polar alignment</p>
+			<a id="polaralignment"><p>Polar alignment</p></a>
 			
 			<p><b>Do I need
 			to be able to see the pole star from my location to start polar alignment?</b><br>
@@ -527,7 +479,7 @@
 			this is a direct approach, unlike the usual star slewing and drift alignment
 			methods, where the polar alignment gradually increases with each iteration.</p>
 			
-			<p>Sky Recognition / Plate Solving</p>
+			<a id="skyrecognition"><p>Sky Recognition / Plate Solving</p></a>
 			
 			<p><b>What is Sky Recognition?</b>
 			<br>Sky recognition is StarAid’s automatic and improved plate solving
@@ -568,45 +520,39 @@
                 </div>
 			</p>
 			
-			<p>This
-			image shows a simulation of StarAid recognising star fields with a 200mm guide
+			<p>Thisimage shows a simulation of StarAid recognising star fields with a 200mm guide
 			scope. The colours denote solution time (in seconds). The dark blue spots means
 			no solution found in 10s (it will take longer).</p>
 			
-			<p>All these
-			unsolved fields trace the plane of the Milky Way (i.e. the galactic equator).
+			<p>All these unsolved fields trace the plane of the Milky Way (i.e. the galactic equator).
 			The dark blue concentration aligns with the center of the Milky Way. Is most
 			cases, the actual solve time is less than 1 second.</p>
 			
-			<p><b>What
-			optical focal length can be used for Sky Recognition?</b><br>
+			<p><b>What optical focal length can be used for Sky Recognition?</b><br>
 			StarAid is optimised for use with 100mm to 150mm guide scopes. It is possible,
 			though not recommended, to use larger guide scopes, or use StarAid as off-axis
 			guider. Note that some functionality will be lost in this case and the
 			performance reduced. Sky Recognition feature is lost at larger focal lengths.</p>
 			
-			<p>Troubleshooting</p>
+			<a id="troubleshooting"><p>Troubleshooting</p></a>
 			
-			<p><b>I
-			accidentally connected my StarAid to a network switch.</b><br>
+			<p><b>I accidentally connected my StarAid to a network switch.</b><br>
 			Any damage that results from improper use will not be covered by your<a
 			href="{% url 'returns_and_warranty' %"> warranty.</a>However, most likely, this will
 			not damage StarAid.</p>
 			
-			<p><b>I
-			accidentally connected my StarAid to a Power-over-Ethernet hub.</b><br>
+			<p><b>I accidentally connected my StarAid to a Power-over-Ethernet hub.</b><br>
 			Any damage that results from improper use will not be covered by your<a
 			href="{% url 'returns_and_warranty' %}"> warranty</a>. However, most likely, this will not
 			damage StarAid.</p>
 			
-			<p><b>I
-			accidentally connected a cross-cable to StarAid.</b><br>
+			<p><b>I accidentally connected a cross-cable to StarAid.</b><br>
 			Any damage that results from improper use will not be covered by your<a
 			href="{% url 'returns_and_warranty' %}"> warranty</a>. However, if the supply voltage was
 			12V or less (such as with the supplied power supply), it shouldn’t be a
 			problem.</p>
 			
-			<p>Camera control</p>
+			<a id="cameracontrol"><p>Camera control</p></a>
 			
 			<p><b>Can I control my camera with StarAid?</b>
 			<br>
@@ -617,14 +563,13 @@
 			<br>
 			Not at the moment. We are considering adding the functionality later on.</p>
 			
-			<p
-			>Dew-heater control</p>
+			<a id="dewheater"><p>Dew-heater control</p></a>
 			
 			<p><b>Can I control my dew heater with StarAid?</b>
 			<br>
 			Not yet. We are considering creating a new accessory to allow this.</p>
 			
-			<p>Mount GO-TO</p>
+			<a id="mountgoto"><p>Mount GO-TO</p></a>
 			
 			<p><b>Can I use StarAid to perform a GO-TO with my mount?</b>
 			<br>
@@ -635,7 +580,7 @@
 			Only manually, by entering and checking the sky coordinates from the App. We
 			are considering an update to enable StarAid to control your mount’s GOTO.</p>
 			
-			<p>Twilight and moonlight</p>
+			<a id="twilight_and_moonlight"><p>Twilight and moonlight</p></a>
 			
 			<p><b>Can I use StarAid during extended twilight or moonlight conditions?</b></p>
 			
