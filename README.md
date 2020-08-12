@@ -613,11 +613,11 @@ When the Heroku app url is generated, add it - via an environment variable - to 
  
 
 ### Work based on other code
--codepen.io for the search bar
--Cindy blog to setup a newsletter https://achiengcindy.com/
--Code institude ecommerce lecturing material code
--Code from the staraid.ai site (polcies and FAQs)
--Code from the template that i have used https://demo.themewagon.com/preview/free-html5-bootstrap-4-e-commerce-website-template-eiser
+- codepen.io for the search bar
+- Cindy blog to setup a newsletter https://achiengcindy.com/
+- Code institude ecommerce lecturing material code
+- Code from the staraid.ai site (polcies and FAQs)
+- Code from the template that i have used https://demo.themewagon.com/preview/free-html5-bootstrap-4-e-commerce-website-template-eiser
 
 ### Acknowledgements
 
