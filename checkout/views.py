@@ -27,13 +27,15 @@ def checkout(request):
             for id, quantity in cart.items():
                 product = get_object_or_404(Product, pk=id)
                 total += quantity * product.price
-                order_line_item = OrderLineItem(
+                item = OrderLineItem(
                     order=order,
                     product=product,
                     quantity=quantity
                 )
-                order_line_item.save()
-            
+                item.save()
+                product.stock -= quantity
+                product.save()
+
             try:
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
