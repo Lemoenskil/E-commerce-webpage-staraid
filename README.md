@@ -371,11 +371,13 @@ The website  html pages extend from the base.html page where the navbar and foot
   - With the cards, images are clickable and allso the hover eye icon can direct users to the product detail page. There is also an Add to Cart button that adds the item to the customer's cart.  When an item is added to the cart it will not redirect it will show on the navbar that you have and item in the cart.
 
 
-- Details Product Page
+- Single product Page
 
   - Once the customer  clicks clicks to the product detail page. They can see a more images of the product and find out specific information about the Features Specification and review and comments.
 
   - If the customer wants to purchase this product, they can use the Add to Cart button to put the item in their cart. Doing this also redirects the customer to the cart page.
+   
+  -The customer can also see the available stock
 
 ### Search App
 
@@ -415,166 +417,211 @@ The website  html pages extend from the base.html page where the navbar and foot
 
 - Checkout page
 
-  - On the site, users can find the checkout page by clicking on the Checkout button on the Cart page. Users must be logged in to proceed to checkout and will be directed to do so if not logged in. If the user logs in via the checkout button, they will move directly to the checkout page and not be redirected the Index page like the Login link does.
+  - Users must be logged in to proceed to checkout and will be directed to do so if not logged in. If the user logs in, they will move directly to the checkout page.
 
-  - At checkout, there are two forms: the order form and the payment form. Here users will add all relevant information in order to complete checkout.
+  - At checkout, there are two forms: the order form and the payment form. Here users will add all relevant information in order to complete checkout the order form will be filled with infromation from the created profile.
 
-  - On successful completion at checkout, users will see a success message at the top of the page and will be directed to the Comics page in case they want to purchase more items. If a user is unsuccessful, they will also see a message.
+  - On successful completion of payment , users will see a success message at the top of the page and will be directed to the All product page in case they want to purchase more items. If a user is unsuccessful, they will also see a message.
+
+### Shipping App
+
+- Cart page
+
+  - The user can use this app to get the shipping cost that will be added to the total of the cart 
 
 ### Cart App
 
 - Cart page
 
-  - This page can be accessed by clicking on the Cart link in the navbar, which is visible on every page. Users will see a brief explanation of the cart and the checkout button.
+  - This page can be accessed by clicking on the Cart link in the navbar or from All Product or Single Product page. Users will see a brief explanation of the cart and the checkout button.
 
-  - If there are items in the cart, the user will see them display above the total. The items are smaller than displayed on the Comics page to differentiate between pages.
+  - If there are items in the cart, the user will see them display with the total price. The order line items have thumbnail images and the quantities can be adjusted in the cart.
 
-  - When users click Add to Cart buttons throughout the site, a yellow badge appears beside the cart link and icon - users are not directed to the cart page unless they click the link in the navbar. This is so users can continue to browse. The badge helps the user to see how many items are currently in the cart at any given time.
+  - Customers also have the option to remove the item from the by changing the quantiy to 0..
 
-  - Customers also have the option to remove the item from the cart when on the Cart page. This ensures users have more control over what they purchase and facilitates a change of mind.
+### News letter App
+
+-  Footer
+
+  - On the footer the customer or prospective customer can subscribe to a newsletter there will be a message got say you are successful and you will recieve and email.
 
 ### Features Left to Implement
 
-- Forum
+- Blog
 
-  - This would enable purchasers of the comics to give feedback and chat to peers about the comics they've bought. It would also give the site owner a way to see where their comics have ended up. Additionally, once the comics are sold, the store would be disabled and the forum would take precedence.
+  - Where customer can write about their experience and and upload photo taken with the product
 
 - Guest shopping
 
-  - For users who want to purchase comics but don't want to sign up to the site, this feature would give them a way to do this. This would be in the form of an extra button called 'Guest' that displays when users are prompted to log in.
+  - For users who want to purchase  but don't want to sign up to the site, this feature would give them a way to do this. This would be in the form of an extra button called 'Guest' that displays when users are prompted to log in.
 
-- Contact Form
+- Coupon
 
-  - Instead of users having to email in via the mailto link in the footer, they would be able to access a form on the site, which they would fill in. Once they hit send, the email would be sent directly to the store's owner.
+  - On the cart an place where you can fill in a coupon to get discount
+  - 
+- Logistics database
 
-- Social links
-
-  - Twitter, Facebook, YouTube and Instagram icons were removed in the final stages of the project because the store does not have any social accounts and it would be a bad user experience to keep them linked with no destination. Once the site owner has social accounts to link to, they will be re-added in the footer section.
-
+  - Have the following data for creating invoice and sending to customer, can login as accountant to see overview of order and invoices, to login as logistics offer see dashboard of stock and open order and have a forcast 
+  - 
 - Profile page
 
-  - On logging in the user would be directed to their own Profile page. It would be personalised for them and information including comic favourites, past orders and the ability to edit personal information would be available to the user. 
+  - Have a profile page where you can see your order and blogs ext and load a profile picture.
   
+- Cookies popup
 
-### Features Left to Implement
+  - Put in the cookies popup as i have the policy already.
 
-- Want to make different data object with set fields that you can choose from example pest type, soil types.
-- Want to make it more sociable add a blog where user can discuss different topics regards to gardening
-- Proper, secure user registration and authorisation.
-- Augmenting the styling and visual effect and improved content.
-- I have lose properties like soil, position, pest that i can use later to put into dashboard to make the data more visual
-- A option to create your own account select your plants and get your own calendar
+- Product sorting and show amount
 
+  - At the moment I only have six product but when i get more I will need to add pagination as show amount in the All Product page,  Also I can add the sorting fuctionality example sorting on price.
 
 ## Technologies Used
 
-- Python
+- Django
+- Django Crispy Forms
+- Django Storages
 - HTML5
 - CSS / Bootstrap 4
-- CSS / Materialize
+- SCSS
 - JS / JQuery
-- Mongo
-- Flask
+- Travis
+- SQLite3
+- PostgreSQL
 - Heroku
 - Google fonts
 - C9 IDE
+- Github
 - Google Chrome developer
+- Pencil
+- Diagrams.net
+- S3 Amazon Web Services
+- Stripe
 
 
 ## Testing
 
-### Account App  the follwing test has been done and have pased
+### Continous Integration - Travis
+
+Continuous Integration - to test code was used with Travis. To see if the built see top of the readme file in GitHub
+
+### Automated tests
+
+#### Account App  the follwing test has been done and have pased
 - Views
     - Test Login
-        test_view_url_exists_at_desired_location
-        test_view_uses_correct_template
-        test_post_login_user
-        test_post_login_invalid_user
-    -Test Register
-        test_view_url_exists_at_desired_location
-        test_view_uses_correct_template
-        test_post_creates_user
-        test_post_user_form_not_valid
-        test_post_profile_form_not_valid
-    -Test Logout
-        test_logout
-     -Test Update
-        test_view_url_exists_at_desired_location
-        test_not_logged_in_redirects_to_login
-        test_view_uses_correct_template
-        test_post_update_user
-        test_post_update_userform_not_valid
+    - Test Register
+    - Test Logout
+    - Test Update
 - Models
     -Test Profile
-        test all labels model
 - Backends
     -Test Case Insensitive Auth
-        test_authenticate_username_good_password
-        test_authenticate_email_good_password
-        test_authenticate_fails_bad_password
-        test_authenticate_fails_non_existent_user
-        test_get_user
-        test_get_user_fails_for_missing_user
 - Forms
     -Test User Login Form
-        test_username_or_email_label
-        test_password_label
     -Test User Registration Form
-        test_username_label
-        test_email_label
-        test_password1_label
-        test_password2_label
-        test_clean_email
-        test_clean_email_not_unique
-        test_clean_password2
-        test_clean_password2_empty
-        test_clean_password2_mismatch
     -Test Profile Form
-        test_full_name_label
-        test_birthdate_label
-        test_phone_number_label
-        test_country_label
-        test_postcode_label
-        test_town_or_city_label
-        test_street_address1_label
-        test_street_address2_label
     -Test User Update Forms
-        test_username_label
-        test_email_label
 
-It has been tested with  Chrome Dev Tools and on my Android phone. 
+#### Cart App  the follwing test has been done and have pased
+- test
+    - Test cart
+    - Test view
+    - Test quantiy
+    - Test Region
+    - Test adjust
+    - Test content
 
-Test CSS with css-validator
+#### Checkout App  the follwing test has been done and have pased
+- Views
+    - Test redirects
+- Models
+    -Test labels and quantities
+- Forms
+    -Test order form and make payment form
 
-Test HTML with validator.w3
+
+#### Product App  the follwing test has been done and have pased
+- Views
+    - Test product and single product
+- Models
+    -Test product and product specification lables
+
+#### Shipping App  the follwing test has been done and have pased
+- Views
+    - Test shipping adjust region
+- Models
+    -Test test shipping labels
+
+### Manual testing by feature
+
+- It has been tested with  Chrome Dev Tools 
+
+1. Navbar: Click each link/icon in the navbar to be directed to relevant pages. On mobile or iPad, tap on the links via the hamburger menu icon.
+2. On the Index page check that all button link to correct page and that the correct product are hooked to the offer and featured areas
+3. Footer checked that all the links are working and that you can subscribe to a newsletter
+4. On the All Product page check that you can click on the image or the hover box to go to view or in cart
+5. In the Product detail check that you can place a review and have the ability to be approve it in the database by the administrator. 
+6. Cart: In the cart, delete an item by making the quantiy 0.  Click checkout button to proceed to checkout - if logged in, if not, you'll be asked to log in or register. If successful, you'll be taken directly to the checkout page.
+7. Logging in: Fill in the form, you can now proceed to checkout and are logged in.
+8. Logging out: Will be visible if logged in already. Click the Logout link in the navbar - redirect to index page and success message displays.
+9. Register form: Can be found in the Register link in the navbar then fill out the form with your credentials. You will use those new credentials when logging in.
+10. Update Profile: Click in the navbar on update profile only visible when loged in, can update all except for username and password
+10. Password Reset: Click the forgot my password link, go to your email inbox and click reset link. Add and confirm new password. Login using new credentials.
+11. Search: Type Star to find relevant product. 
+12. Contact form: Fill in contact form (by clicking on it in navbar) and check if I receive a mail in my inbox  
+
 
 ## Deployment
 
-The app is deployed to Heroku and can be accessed at [].
+### Running the project locally
 
-Version control is implemented in git, by pushing the project directory to Github at [https://github.com/Lemoenskil/Milestone_project_3_Garden_planner], as well as pushing to Heroku.   
-I have largely used  with detailed commit messages, to trace back changes, 
-       
-The database is hosted at MongoDB Atlas.
-The details of the database connection are found inside the requirements.txt - it uses the os class environ method to point Heroku to its own config variable (MONGOBD_URI) in order to keep the production database connection string secret.
-A Procfile is used to help Heroku to identifies them commands that are run by the application's dynos and how to run pieces of the app including the starting point app.py
+This project was created, developed and run locally using a Cloud9 as a code editor. To start the project, first create a workspace on your local machine and then open the folder on Cloud9 or a code editor of your choice. Add the README.md file as the first file and then create a .gitignore file in anticipation for the files that would need to be ignored for the project.
+
+Itall Django by using pip3 install Django. Then add your project folder in order to access the Settings.py file and additional files for the project.
+
+Before initialising git and pushing to your local repositiory on Github, ensure that the SECRET_KEY contained in the Settings.py file has been added to an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. 
+Initialise git, add a commit message and then push everything to your online repository. Github  [here](https://github.com/Lemoenskil/E-commerce-webpage-staraid
+
+The project is now visible and accessible locally by using python3 manage.py runserver in your terminal. To exit the project, press Control-C, if using Cloud9. Initialise the database and create tables within it by using python3 manage.py makemigrations and then python3 manage.py migrate. 
+Create your superuser. Following this, add a base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp XXX) extend the base.html file to new pages.
+
+### Heroku Deployment
+
+Deploying to Heroku can take place at the start, in the middle or at the end of the project. I deployed my project to Heroku at the end of the project so I could focus on the build in development.
+
+To deploy, create an app in your Heroku account. In the resources tab you can opt for a PostgreSQL database for the project - I chose the free one for this project. Selecting this database option pushed my Database URL to the config vars section in the Settings tab in Heroku.
+
+Locally, use pip3 to install dj-database-url to your project - this is so the PostgreSQL database can be supported. 
+In the Settings.py file comment out the SQLite database that comes with Django in favour of using Heroku's PostgreSQL database. Use this code: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} and import dj_database_url at the top of the Settings.py file. In addition to this, insall psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
+
+Add all keys and urls in the env.py file to the config vars section of the Settings tab within Heroku so they can be supported there. Use python3 manage.py makemigrations and python3 manage.py migrate to create tables in the new database. 
+
+Then create a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because PostgreSQL is the new database.
+
+Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that is set up, use pip3 freeze --local > requirements.txt to ensure all dependencies are in place. After this, create the Procfile, which is needed for Heroku to determine what type of app it is.
+
+When the Heroku app url is generated, add it - via an environment variable - to the ALLOWED_HOSTS section in the Settings.py file. When the project is complete, change Debug = False.
+
 
 ## Credits
 
 ### Photos used:
-Pictures used, Two gardener steampunk toys with a strawberry bush grown in a flower pot, Purchase code: 6420eb4f-b12f-48f9-842e-71d16f4bb7a5
-Link to plant pictures are random an my be protected but it was tried to avoided
+
 
 ### Content     
 
  
 
 ### Work based on other code
--codepen.io for the search bar                              
+-codepen.io for the search bar
+-Cindy blog to setup a newsletter https://achiengcindy.com/
+-Code institude ecommerce lecturing material code
+-Code from the staraid.ai site (polcies and FAQs)
+-Code from the template that i have used https://demo.themewagon.com/preview/free-html5-bootstrap-4-e-commerce-website-template-eiser
 
 ### Acknowledgements
 
 Thanks to my husband for help me test and the many hours of patience
-Also, thanks to my mentor Spencer helping to clean my code and introducing me to Flask forms to sort out the user login issues.
+Also, thanks to my mentor Spencer helping to clean my code and the support.
 Thanks to stack overflow without it this would not have been possible where I have used a lot of examples.
         
