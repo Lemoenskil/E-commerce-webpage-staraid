@@ -17,3 +17,4 @@ botocore==1.15.45
 gunicorn==20.0.4
 django-contrib-comments==1.9.2
 django-rated-reviews==0.6.0
+django-mathfilters==1.0.0
