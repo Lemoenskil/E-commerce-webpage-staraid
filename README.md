@@ -264,7 +264,7 @@ For the businnes this website will be of value as it is our cashregister for rec
 
 ### Website Structure
 
-#### Database desig for e-commerce website
+#### Database design for e-commerce website
 
 ![Database](/doc/staraid_db_webpage.png)
 
@@ -288,39 +288,42 @@ In the links below you can see the mock-up’s that I drew using the mock-up too
 ### Design Ideas
 
 - Navbar
-Standard on all the pages there will be a Navbar.  The Navbar will navigate to all sites on the website and  to Home, and have the register functionality
+Standard on all the pages there will be a Navbar.  The Navbar will navigate to all sites on the website and  to Home, and have the accounts and search functionality
 
 - The landing page 
 Will have a banner with features of the main product on it.   A offer eara wher there will be the oppurtunity to go directly to the staraid main product.
 A featured product area  where some product will be featured.   And the last will be some comment and review preasent on the landing page.
 
-- Single plant view
-Will have a picture, a plant table and the information on the plant.  A floating button will be available when you are loged in to change or delete the record.
+- All Product
+Will have an overview of all the products available where you can either view or put directly in cart  (for the future there will be favorite )
 
-- Add Plant/Crops
-page will be a form where you can create the date.  The table will be updated using a checkbox.  and there will be a submit button.
+- Product detals
+Detais of the product that includes photo's , price, stock, Features, specifications, reviews, comment and a link to the cart
 
-- Edit, Delete and view Plant/Crops
-page will be a form where you can update the date (change or delete.  The table will be updated using a checkbox.  button for delete and change with a modal.
+- Cart
+List of products selected with option to change qantiy or empty cart, selection of transport price  and then to proceed to chekout
 
-- Search result page
-This page will sow the result of the search of the name crops or nots.
+- Checkout
+You can only proceed to checkout if you are signed in  your shipping details will be automatically populated and and you only need to do payment fields
 
-- Plant Calendar
-From the Navbar you can navigate here.  A table will be on this page
+- Staraid
+Page is a summery of all the features of the product
 
-- Register page
-Page will have a form and a submit button
+- Q&A
+Page will have in Question and awnsers 
+
+- New, and Policy, warranty ext pages 
+Are for information
+
+- Contact
+- This page will have a contact from
 
 - Footer
-Standard on all the pages there will be a footer.
+The footer will have link to the infromation pages and a place where you can signup for the newsletter
 
 
-##### Font
-Google fount Roboto is used
-
-##### Colour Scheme
-Green Orange and White Scheme with a purple Jumbotron
+##### Template used
+Used the template Free HTML5 Bootstrap 4 e-Commerce Website Template
 
 ## Features
 
@@ -332,6 +335,126 @@ The website  html pages extend from the base.html page where the navbar and foot
 
 - Footer: In this section, the user will find additional pages that can be accessed by clicking the links. It also includes the logo payment and shipping term, warranty, and policy,  and a obtion to subscribe to updates.
 
+### Home App
+
+- Home page
+
+  - The Home page displays a carousel and its main purpose is to get the user attention to the on offer product.  The featured area has 4 main summerized features in.  On offer area highlight the product on offer, where 3 comments are display that refer to the on offer product.
+  - The Features product are product that are featured and highlighted 
+
+- Contact page
+
+  - This page features an contact form that will send an email to myself with the customers details.
+
+- Staraid page
+
+  - This is a single page with a lot of textual information about StarAid. It gives information with pictures and videos.
+  - 
+- FAQs page
+
+  - This page gives the user more information on frequently asked questions.  It has a indext with a tag to the text.  There are also a few link that will refer you back to the privacy policy or warranty
+
+- Privacy Policy, Return and warranty, Cookies page, Payment and shipping, Terms and Conditions pages
+
+  - A page like this would be added to any store and website as to europeen law.
+
+- News page
+
+  - You will find emmbedded pdf of magazine articles.
+
+### Product App
+
+- Product page
+
+  - This is the page contains a list of all the products in the shop. The page contains cards with a image and price. 
+
+  - With the cards, images are clickable and allso the hover eye icon can direct users to the product detail page. There is also an Add to Cart button that adds the item to the customer's cart.  When an item is added to the cart it will not redirect it will show on the navbar that you have and item in the cart.
+
+
+- Details Product Page
+
+  - Once the customer  clicks clicks to the product detail page. They can see a more images of the product and find out specific information about the Features Specification and review and comments.
+
+  - If the customer wants to purchase this product, they can use the Add to Cart button to put the item in their cart. Doing this also redirects the customer to the cart page.
+
+### Search App
+
+- Search navbar
+
+  - On the navbar  users can search products. The can searh icon and search overlay or pop up will appear below the navboar.  There they can type their search and press on teh search icon
+
+  - Results are displayed and are in the same page as all products page  
+
+### Accounts App
+
+- Login page
+
+  - To proceed to checkout, users must register and login. Regular users can use this page to login as the form will be provide. Users log in by using their username and password. Once logged in, they are directed to the to the checkout page.
+
+  - If a user has forgotten their password, they can use use the reset password link below the form.
+
+- Register page
+
+  - Users can register for the website by using the form on this page. New users can register by adding their email address, desired username, password and the password  and personal detals must be confirmed. Then the user can press create a account  button.
+
+  - On registering, the new user will be redirected to the Index Page and will see a sucess message display under the navbar. 
+
+- Update page
+
+  - Users can update their detail except for password and username  on this page. After change they can just click button  update account. 
+  - 
+- Reset pages
+
+  - Outside the Accounts App, are the reset password pages. You can find these pages in a separate folder in the top level Templates folder in the registration folder.
+  
+  - Users can find the reset password route when they go through the Reset Form. There is a link to this form at the bottom of the Login page. When the user enters their email address, they receive a reset link to their address.
+
+  - When the reset link is pressed, users are directed to a new form where they can change their password. Once completed, users then see the reset complete form prompting them to login using their new credentials.
+
+### Checkout App
+
+- Checkout page
+
+  - On the site, users can find the checkout page by clicking on the Checkout button on the Cart page. Users must be logged in to proceed to checkout and will be directed to do so if not logged in. If the user logs in via the checkout button, they will move directly to the checkout page and not be redirected the Index page like the Login link does.
+
+  - At checkout, there are two forms: the order form and the payment form. Here users will add all relevant information in order to complete checkout.
+
+  - On successful completion at checkout, users will see a success message at the top of the page and will be directed to the Comics page in case they want to purchase more items. If a user is unsuccessful, they will also see a message.
+
+### Cart App
+
+- Cart page
+
+  - This page can be accessed by clicking on the Cart link in the navbar, which is visible on every page. Users will see a brief explanation of the cart and the checkout button.
+
+  - If there are items in the cart, the user will see them display above the total. The items are smaller than displayed on the Comics page to differentiate between pages.
+
+  - When users click Add to Cart buttons throughout the site, a yellow badge appears beside the cart link and icon - users are not directed to the cart page unless they click the link in the navbar. This is so users can continue to browse. The badge helps the user to see how many items are currently in the cart at any given time.
+
+  - Customers also have the option to remove the item from the cart when on the Cart page. This ensures users have more control over what they purchase and facilitates a change of mind.
+
+### Features Left to Implement
+
+- Forum
+
+  - This would enable purchasers of the comics to give feedback and chat to peers about the comics they've bought. It would also give the site owner a way to see where their comics have ended up. Additionally, once the comics are sold, the store would be disabled and the forum would take precedence.
+
+- Guest shopping
+
+  - For users who want to purchase comics but don't want to sign up to the site, this feature would give them a way to do this. This would be in the form of an extra button called 'Guest' that displays when users are prompted to log in.
+
+- Contact Form
+
+  - Instead of users having to email in via the mailto link in the footer, they would be able to access a form on the site, which they would fill in. Once they hit send, the email would be sent directly to the store's owner.
+
+- Social links
+
+  - Twitter, Facebook, YouTube and Instagram icons were removed in the final stages of the project because the store does not have any social accounts and it would be a bad user experience to keep them linked with no destination. Once the site owner has social accounts to link to, they will be re-added in the footer section.
+
+- Profile page
+
+  - On logging in the user would be directed to their own Profile page. It would be personalised for them and information including comic favourites, past orders and the ability to edit personal information would be available to the user. 
+  
 
 ### Features Left to Implement
 
