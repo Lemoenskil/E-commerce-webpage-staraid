@@ -575,41 +575,38 @@ Continuous Integration - to test code was used with Travis. To see if the built 
 
 ### Running the project locally
 
-This project was created, developed and run locally using a Cloud9 as a code editor. To start the project, first create a workspace on your local machine and then open the folder on Cloud9 or a code editor of your choice. Add the README.md file as the first file and then create a .gitignore file in anticipation for the files that would need to be ignored for the project.
+This project was developed and run locally using a Cloud9.  In Cloud9 a workspace was created where django was installed. Files was added example the README.md file as the first file and then create a .gitignore file in anticipation for the files that i do not want to have visable in Github.
 
-Itall Django by using pip3 install Django. Then add your project folder in order to access the Settings.py file and additional files for the project.
+Django i have started a project that will be the folder with the setting file,  And then added extra apps as I went a long.
 
-Before initialising git and pushing to your local repositiory on Github, ensure that the SECRET_KEY contained in the Settings.py file has been added to an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. 
+Crated an env.py file - this file stores all the environment variables needed throughout the project and makes sure important private inforamtion isn't pushed to Github. 
 Initialise git, add a commit message and then push everything to your online repository. Github  [here](https://github.com/Lemoenskil/E-commerce-webpage-staraid
 
-The project is now visible and accessible locally by using python3 manage.py runserver in your terminal. To exit the project, press Control-C, if using Cloud9. Initialise the database and create tables within it by using python3 manage.py makemigrations and then python3 manage.py migrate. 
-Create your superuser. Following this, add a base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp XXX) extend the base.html file to new pages.
+The project is now visible and accessible locally by using python3 manage.py runserver in your terminal.  Initialise the database and create tables within it by using python3 manage.py makemigrations and then python3 manage.py migrate. 
+Create your superuser.  A base.html page as a top level file for the project and when adding new apps (by using python3 manage.py startapp XXX) extend the base.html file to new pages.
 
 ### Heroku Deployment
 
-Deploying to Heroku can take place at the start, in the middle or at the end of the project. I deployed my project to Heroku at the end of the project so I could focus on the build in development.
+I deployed my project to Heroku at the end of the project.  In Heroku create an app in your account. In the resources tab you can opt for a PostgreSQL database for the project. Selecting this database option pushed my Database URL to the config vars section in the Settings tab in Heroku.
 
-To deploy, create an app in your Heroku account. In the resources tab you can opt for a PostgreSQL database for the project - I chose the free one for this project. Selecting this database option pushed my Database URL to the config vars section in the Settings tab in Heroku.
+Locally, use pip3 to install dj-database-url to make use of the postgreS database.  In the Settings.py file SQLite database that comes with Django will only be used if  Heroku's PostgreSQL database is not available and when running test. 
+I have also instal psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
 
-Locally, use pip3 to install dj-database-url to your project - this is so the PostgreSQL database can be supported. 
-In the Settings.py file comment out the SQLite database that comes with Django in favour of using Heroku's PostgreSQL database. Use this code: DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))} and import dj_database_url at the top of the Settings.py file. In addition to this, insall psycopg2-binary==2.8.4 and gunicorn for Heroku deployment.
+Add all keys and urls in the env.py file to the config vars section in Heroku. Use python3 manage.py makemigrations and python3 manage.py migrate to create tables in the new database. 
 
-Add all keys and urls in the env.py file to the config vars section of the Settings tab within Heroku so they can be supported there. Use python3 manage.py makemigrations and python3 manage.py migrate to create tables in the new database. 
+Then create a superuser by using python3 manage.py createsuperuser. Static and Media files are served through Amazon Web Services S3.  pip3 freeze --local > requirements.txt to ensure all dependencies are in place. After this, create the Procfile, which is needed for Heroku to determine what type of app it is.
 
-Then create a superuser by using python3 manage.py createsuperuser - this is done again here (like the first time with the SQLite database) because PostgreSQL is the new database.
-
-Static and Media files are served through Amazon Web Services S3 (see Technologies for more information on this) and once that is set up, use pip3 freeze --local > requirements.txt to ensure all dependencies are in place. After this, create the Procfile, which is needed for Heroku to determine what type of app it is.
-
-When the Heroku app url is generated, add it - via an environment variable - to the ALLOWED_HOSTS section in the Settings.py file. When the project is complete, change Debug = False.
+When the Heroku app url is generated, add it - via an environment variable - to the ALLOWED_HOSTS section in the Settings.py file. When the project is complete,
 
 
 ## Credits
 
 ### Photos used:
+- All Content comes form Starid where Pieter Smith have given met the authorization to use for educatinal porposes
 
 
 ### Content     
-
+- All Content comes form Starid where Pieter Smith have given met the authorization to use for educatinal porposes
  
 
 ### Work based on other code
