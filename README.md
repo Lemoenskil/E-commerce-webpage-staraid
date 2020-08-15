@@ -50,12 +50,12 @@ The website need to include the following
 - Have terms, conditions and policies 
 
 I need the following for the website
-- logo/ Name
-- Data Base for product, prices, stock, review, b
+- Logo/ Name
+- Data Base for product, prices, stock, review
 - Picture, videos
 - Bootstrap template
 - Stripe setup
--
+
 
 ### Stakeholders
 
@@ -79,7 +79,6 @@ Acceptance criteria:
 * Can click to view the details of the product
 * Can add to cart from details page
 * Can search for a product
-
 
 #### Review a product
 
@@ -210,7 +209,7 @@ Acceptance criteria:
 
 * Login as a customer
 * Post the text
-* Add photo's
+* Add photos
 * Change blog
 * Delete the blog
 * Geo tag setup
@@ -226,7 +225,7 @@ Acceptance criteria:
 * View order history
 * View new software updates available
 * View your blog and reviews
-* See photo’s placed
+* See photos placed
 
 #### News letter
 
@@ -236,7 +235,6 @@ Acceptance criteria:
 
 * Sign up for news letter
 * Stop receiving newsletter
-
 
 ## Project Purpose
 
@@ -260,7 +258,6 @@ For the business this website will be of value as it is our cash register for re
 - Order overview for Customer service
 - Stock overview for Logistics
 - Customer communication via email or user account
-
 
 ### Website Structure
 
@@ -377,7 +374,7 @@ The website  html pages extend from the base.html page where the navbar and foot
 
   - If the customer wants to purchase this product, they can use the Add to Cart button to put the item in their cart. Doing this also redirects the customer to the cart page.
    
-  -The customer can also see the available stock
+  - The customer can also see the available stock
 
 ### Search App
 
@@ -441,7 +438,7 @@ The website  html pages extend from the base.html page where the navbar and foot
 
 ### News letter App
 
--  Footer
+- Footer
 
   - On the footer the customer or prospective customer can subscribe to a newsletter there will be a message got say you are successful and you will receive and email.
 
@@ -497,7 +494,6 @@ The website  html pages extend from the base.html page where the navbar and foot
 - S3 Amazon Web Services
 - Stripe
 
-
 ## Testing
 
 ### Continuous Integration - Travis
@@ -535,10 +531,9 @@ Continuous Integration - to test code was used with Travis. To see if the built 
 - Views
     - Test redirects
 - Models
-    -Test labels and quantities
+    - Test labels and quantities
 - Forms
-    -Test order form and make payment form
-
+    - Test order form and make payment form
 
 #### Product App  the following test has been done and have passed
 - Views
@@ -550,7 +545,7 @@ Continuous Integration - to test code was used with Travis. To see if the built 
 - Views
     - Test shipping adjust region
 - Models
-    -Test shipping labels
+    - Test shipping labels
 
 ### Manual testing by feature
 
@@ -569,7 +564,6 @@ Continuous Integration - to test code was used with Travis. To see if the built 
 10. Password Reset: Click the forgot my password link, go to your email inbox and click reset link. Add and confirm new password. Login using new credentials.
 11. Search: Type Star to find relevant product. 
 12. Contact form: Fill in contact form (by clicking on it in navbar) and check if I receive a mail in my inbox  
-
 
 ## Deployment
 
@@ -598,16 +592,13 @@ Then create a superuser by using python3 manage.py createsuperuser. Static and M
 
 When the Heroku app url is generated, add it - via an environment variable - to the ALLOWED_HOSTS section in the Settings.py file. When the project is complete,
 
-
 ## Credits
 
 ### Photos used:
 - All Content comes form Staraid where Pieter Smith have given met the authorization to use for educational proposes
 
-
 ### Content     
 - All Content comes form Staraid where Pieter Smith have given met the authorization to use for educational proposes
- 
 
 ### Work based on other code
 - codepen.io for the search bar
